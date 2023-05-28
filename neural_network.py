@@ -257,42 +257,20 @@ class Neural_Network():
         return fitness/len(inputs)
         
 
-xor_network = Neural_Network(2, 1)    
+network = Neural_Network(2, 1)
+conn1 = network.create_connection(0, 2)
+conn2 = network.create_connection(1, 2)
+conn3, conn4 = network.create_node(conn1)
+conn5, conn6 = network.create_node(conn2)
+conn7 = network.create_connection(0, 5)
+conn8 = network.create_connection(1, 4)
+conn9 = network.create_connection(3, 5)
+conn3.weight = 1
+conn4.weight = 1
+conn6.weight = 1
+conn5.weight = -1
+conn7.weight = -1
+conn8.weight = -1
+conn9.weight = -1
 
-weight1 = -10.0
-weight2 = -10.0
-weight3 = 20.0
-weight4 = -20.0
-weight5 = 20.0
-weight6 = -20.0
-
-# Create the connections between neurons
-connection1, connection2 = xor_network.create_node(xor_network.create_connection(xor_network.input_neurons[0], xor_network.genome_neurons[2]))
-connection1.weight = weight1
-connection2.weight = weight2
-
-connection3, connection4 = xor_network.create_node(xor_network.create_connection(xor_network.input_neurons[1], xor_network.genome_neurons[2]))
-connection3.weight = weight3
-connection4.weight = weight4
-
-connection5, connection6 = xor_network.create_node(xor_network.create_connection(xor_network.genome_neurons[2], xor_network.genome_neurons[3]))
-connection5.weight = weight5
-connection6.weight = weight6
-
-connection7 = xor_network.create_connection(xor_network.genome_neurons[3], xor_network.output_neurons[0])
-connection7.weight = weight1
-
-output = xor_network.run([0, 0])
-print(output)  # Expected output: 0.0
-
-# Run the network with XOR inputs [0, 1]
-output = xor_network.run([0, 1])
-print(output)  # Expected output: 1.0
-
-# Run the network with XOR inputs [1, 0]
-output = xor_network.run([1, 0])
-print(output)  # Expected output: 1.0
-
-# Run the network with XOR inputs [1, 1]
-output = xor_network.run([1, 1])
-print(output)  # Expected output: 0.0# Expected output: -0.5
+print(network.run([0, 1]))
