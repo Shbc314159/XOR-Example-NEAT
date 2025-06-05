@@ -13,7 +13,7 @@ class Cube():
     def __init__(self):
         self.starting_x = 0
         self.starting_y = -9
-        self.starting_z = -35
+        self.starting_z = -45
         self.starting_direction = 0
         self.cube_pos = [self.starting_x, self.starting_y, self.starting_z]
         self.velocity = [0, 0]  

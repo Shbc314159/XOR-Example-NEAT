@@ -46,15 +46,11 @@ class World():
         """
 
         x = -22
-        z = 45
-        if globalvars.globalvars.x == 22 and globalvars.globalvars.z == -15:
+        z = -15
+        if globalvars.globalvars.x == 22:
             x = -22
-        elif globalvars.globalvars.x == -22 and globalvars.globalvars.z == -15:
-            z = -50
-        elif globalvars.globalvars.x == -22 and globalvars.globalvars.z == -50:
+        elif globalvars.globalvars.x == -22:
             x = 22
-        elif globalvars.globalvars.x == 22 and globalvars.globalvars.z == -50:
-            z = -15
         
         
         globalvars.globalvars.set_target_vertices(x, z)
