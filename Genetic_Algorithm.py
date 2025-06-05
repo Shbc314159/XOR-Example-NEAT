@@ -37,7 +37,7 @@ class GeneticAlgorithm:
         self.stagnation_limit = stagnation_limit
 
         # Global best tracking
-        self.best_fitness_ever = float('-inf')
+        self.best_fitness_ever = float('inf')
         self.best_network = None
         self.gens_since_improvement = 0
 
@@ -61,16 +61,18 @@ class GeneticAlgorithm:
         self.speciate()
 
         epsilon = 1e-6
-        total_avg_fitness = 0.0
+        total_weight = 0.0
+        weights = {}
         for sp in self.species:
             sp.average_fitness = (sum(member.fitness for member in sp.members) + epsilon) / len(sp.members)
-            total_avg_fitness += sp.average_fitness
+            weights[sp] = 1.0 / sp.average_fitness
+            total_weight += weights[sp]
             num_top = max(int(self.percent_selected * len(sp.members)), 1)
-            sp.members.sort(key=lambda m: m.fitness, reverse=True)
+            sp.members.sort(key=lambda m: m.fitness)
             sp.members = sp.members[:num_top]
 
-        kids_per_sp = {sp: int(round(sp.average_fitness / total_avg_fitness * self.pop_size)) for sp in self.species}
-  
+        kids_per_sp = {sp: int(round(weights[sp] / total_weight * self.pop_size)) for sp in self.species}
+        
         pairings = []
         for sp, n_kids in kids_per_sp.items():
             for _ in range(n_kids):
@@ -95,14 +97,14 @@ class GeneticAlgorithm:
 
         self.population = new_population
 
-        if best_fitness == self.best_fitness_ever:
-            self.gens_since_improvement += 1
-        else:
+        if best_fitness < self.best_fitness_ever:
             self.best_fitness_ever = best_fitness
             self.gens_since_improvement = 0
+        else:
+            self.gens_since_improvement += 1
 
     def best(self):
-        self.best_network = max(self.population, key=lambda x: x.fitness)
+        self.best_network = min(self.population, key=lambda x: x.fitness)
         return self.best_network
     
     @staticmethod
@@ -154,14 +156,14 @@ class GeneticAlgorithm:
             if not sp.members:
                 print('Removing species with fitness ', sp.best_fitness)
                 continue
-            sp.members.sort(key=lambda x: x.fitness, reverse=True)
+            sp.members.sort(key=lambda x: x.fitness)
             curr_best = sp.members[0].fitness
             if curr_best < getattr(sp, 'best_fitness', float('inf')):
                 sp.best_fitness = curr_best
                 sp.stagnant_gens = 0
             else:
                 sp.stagnant_gens += 1
-            if sp.stagnant_gens < 15 or sp.best_fitness > 0.95 * self.best_fitness_ever:
+            if sp.stagnant_gens < 15 or sp.best_fitness < 1.05 * self.best_fitness_ever:
                 survivors.append(sp)
                 
         self.species = survivors

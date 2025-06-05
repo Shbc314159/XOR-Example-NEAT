@@ -207,7 +207,7 @@ class Neural_Network:
         for k in common:
             child_conn[k] = cs[k].clone()
 
-        if fit_s >= fit_o:
+        if fit_s <= fit_o:
             for k in disj_o:
                 child_conn[k] = co[k].clone()
         else:

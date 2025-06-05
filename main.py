@@ -21,7 +21,7 @@ for input1 in inputs:
 
 def main():
 
-    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(500, 0.2, 6, 4, 1, 1, 0.4, 1.5, 10)
+    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(100, 0.2, 6, 4, 1, 1, 0.4, 1.5, 5)
     
     exit_flag = {'stop': False}
     def on_press(key):

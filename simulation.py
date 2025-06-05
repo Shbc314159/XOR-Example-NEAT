@@ -15,7 +15,8 @@ def simulate_fitness(nn, episodes, steps_per_episode):
 
     player.fitness *= len(nn.genome.connections)
     total_score = player.fitness
-    return episodes/total_score
+
+    return total_score/episodes
     
 def draw_simulation(nn, world, episodes, steps_per_episode):
     for _ in range(episodes):
