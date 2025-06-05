@@ -24,7 +24,7 @@ class Neural_Network:
         self.mutate_neuron_prob = mutate_neuron_prob
         self.mutate_connection_prob = mutate_connection_prob
         self.mutate_weight_prob = mutate_weight_prob
-        self.rebuild = False
+        self.rebuild = True
     
     @classmethod
     def empty(cls, num_inputs, num_outputs, mutate_neuron_prob, mutate_connection_prob, mutate_weight_prob):

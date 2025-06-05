@@ -13,7 +13,8 @@ def simulate_fitness(nn, episodes, steps_per_episode):
         for _ in range(steps_per_episode):
             player.update()
 
-    player.fitness *= len(nn.genome.connections)
+    complexity_penalty = 1 + 0.1*(len(nn.genome.connections))
+    player.fitness *= complexity_penalty
     total_score = player.fitness
 
     return total_score/episodes

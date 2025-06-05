@@ -26,7 +26,7 @@ class Player(Cube):
         elif move == 1:
             self.move("a")
         elif move == 2:
-            self.move("d") 
+            self.move("d")
         elif move == 3:
             self.move("u")
 

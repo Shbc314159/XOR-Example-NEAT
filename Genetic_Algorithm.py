@@ -16,7 +16,6 @@ class GeneticAlgorithm:
             return func
     def __init__(self, size, selection_percent, num_inputs, num_outputs,
                  c1, c2, c3, threshold, target_species,
-                 init_exploration_rate=1, exploration_boost=0.1,
                  stagnation_limit=3):
         # Population parameters
         self.pop_size = size
@@ -31,9 +30,6 @@ class GeneticAlgorithm:
         self.threshold = threshold
         self.target_species = target_species
 
-        # Exploration control
-        self.exploration_rate = init_exploration_rate
-        self.exploration_boost = exploration_boost
         self.stagnation_limit = stagnation_limit
 
         # Global best tracking
@@ -50,7 +46,7 @@ class GeneticAlgorithm:
 
     def create_population(self):
         for _ in range(self.pop_size):
-            nn = network.Neural_Network(self.num_inputs, self.num_outputs, self.exploration_rate, 0.05, 0.6)
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.01, 0.05, 0.6)
             nn.mutate()
             self.population.append(nn)
 
