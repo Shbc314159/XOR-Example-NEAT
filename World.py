@@ -19,7 +19,7 @@ class World():
         pygame.display.set_mode(display, DOUBLEBUF|OPENGL|RESIZABLE)
 
         gluPerspective(45, (display[0]/display[1]), 0.1, 110.0)
-        glTranslatef(0, -5, -20)
+        glTranslatef(-15, -5, -20)
         glRotatef(25, 2, 0, 0)
         glEnable(GL_DEPTH_TEST)
 
