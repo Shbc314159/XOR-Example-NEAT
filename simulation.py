@@ -2,7 +2,7 @@ from Player import Player
 from World import World
 from Neural_Network import globalvars
 
-def simulate_fitness(nn, episodes=2, steps_per_episode=100):
+def simulate_fitness(nn, episodes, steps_per_episode):
     total_score = 0.0
     player = Player(nn)
 
@@ -17,7 +17,7 @@ def simulate_fitness(nn, episodes=2, steps_per_episode=100):
     total_score = player.fitness
     return episodes/total_score
     
-def draw_simulation(nn, world, episodes=2, steps_per_episode=100):
+def draw_simulation(nn, world, episodes, steps_per_episode):
     for _ in range(episodes):
         World.randomise_target()
         player = Player(nn)

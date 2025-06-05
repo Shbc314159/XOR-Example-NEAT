@@ -130,7 +130,7 @@ class GeneticAlgorithm:
     def _compute_fitness(nn):
         from simulation import simulate_fitness
         
-        return simulate_fitness(nn, episodes=4, steps_per_episode=100)
+        return simulate_fitness(nn, 2, 150)
 
     def speciate(self):
         for sp in self.species:
