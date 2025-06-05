@@ -18,7 +18,7 @@ class World():
         pygame.display.set_mode(display, DOUBLEBUF|OPENGL|RESIZABLE)
 
         gluPerspective(45, (display[0]/display[1]), 0.1, 110.0)
-        glTranslatef(-15, -5, -20)
+        glTranslatef(0, -5, -20)
         glRotatef(25, 2, 0, 0)
         glEnable(GL_DEPTH_TEST)
 
@@ -41,29 +41,23 @@ class World():
     @classmethod
     def randomise_target(self):
         """
-        randrange = int(self.current_generation/20)
-        x = self.target_origin[0] - randrange + random.randint(0, randrange*2)
-        z = self.target_origin[2] - randrange + random.randint(0, randrange*2)
+        x = random.randint(0, 45)
+        z = random.randint(-50, -15)
         """
-        x = random.randint(-25, 25)
-        z = random.randint(-60, -10)
-        
-        if x < -20:
-            x = -20
-        elif x > 20:
-            x = 20
-        
-        if z > -15:
+
+        x = -22
+        z = 45
+        if globalvars.globalvars.x == 22 and globalvars.globalvars.z == -15:
+            x = -22
+        elif globalvars.globalvars.x == -22 and globalvars.globalvars.z == -15:
+            z = -50
+        elif globalvars.globalvars.x == -22 and globalvars.globalvars.z == -50:
+            x = 22
+        elif globalvars.globalvars.x == 22 and globalvars.globalvars.z == -50:
             z = -15
-        elif z < -55:
-            z = -55
         
-        globalvars.globalvars.target_vertices = (
-            (x + 5, -9.5, z + 5),
-            (x, -9.5, z + 5),
-            (x, -9.5, z),
-            (x + 5, -9.5, z),
-        )
+        
+        globalvars.globalvars.set_target_vertices(x, z)
         
         
     def randomise_barriers(self):

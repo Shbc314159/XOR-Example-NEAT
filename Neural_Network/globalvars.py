@@ -2,7 +2,7 @@ class globalvars():
     def __init__(self):
         self.barriers = []
         self.barriers_vertices = []
-        self.x = 0
+        self.x = -22
         self.z = -15
 
         self.target_vertices = (

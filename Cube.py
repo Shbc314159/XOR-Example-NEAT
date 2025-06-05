@@ -11,7 +11,7 @@ import random
 
 class Cube():
     def __init__(self):
-        self.starting_x = 25
+        self.starting_x = 0
         self.starting_y = -9
         self.starting_z = -35
         self.starting_direction = 0
@@ -200,7 +200,7 @@ class Cube():
         self.current_vertices = self.get_current_vertices()  
         
     def over_floor(self):
-        if 0 <= self.cube_pos[0] <= 50:
+        if -25 <= self.cube_pos[0] <= 25:
             if -10 >= self.cube_pos[2] >= -60:
                 return True
         
