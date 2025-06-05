@@ -2,7 +2,6 @@ import sys
 sys.path.append('C:/Users/samue/OneDrive/Desktop/NEAT/')
 from Neural_Network import globalvars
 from Player import *
-from Genetic_Algorithm import *
 from Walls import *
 import pygame
 import pygame
