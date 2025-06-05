@@ -38,7 +38,7 @@ def main():
     generations = []       # will store generation numbers
 
     # set up interactive plotting
-    plt.ion()
+    plt.ion() 
     fig, (ax_fit) = plt.subplots(1, 1, figsize=(10, 5))
 
     # initial empty lines
@@ -76,6 +76,7 @@ def main():
         
         print(f"→ best fitness = {fitness}")
         print(f"  Species count: {len(genetic_algorithm.species)}")
+        #hey
     
     genetic_algorithm.best_network.save("best_network.pkl")
 
