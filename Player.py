@@ -4,6 +4,7 @@ from Neural_Network import globalvars
 import random
 import keyboard
 from Cube import Cube
+import math
 
 class Player(Cube):  
     def __init__(self, brain):
@@ -18,10 +19,10 @@ class Player(Cube):
     
     def update(self):
         self.update_target()
-        outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], self.direction, self.x_center, self.z_center])
+        outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], math.sin(math.radians(self.direction)), math.cos(math.radians(self.direction)), self.x_center, self.z_center])
         move = outputs.index(max(outputs)) 
         
-        if move == 0:
+        if move == 0: 
             self.move("w")
         elif move == 1:
             self.move("a")

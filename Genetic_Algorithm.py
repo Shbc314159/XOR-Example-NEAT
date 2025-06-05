@@ -16,7 +16,7 @@ class GeneticAlgorithm:
             return func
     def __init__(self, size, selection_percent, num_inputs, num_outputs,
                  c1, c2, c3, threshold, target_species,
-                 stagnation_limit=3):
+                 stagnation_limit=15):
         # Population parameters
         self.pop_size = size
         self.percent_selected = selection_percent
