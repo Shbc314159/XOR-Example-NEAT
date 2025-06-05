@@ -18,9 +18,10 @@ outputs = []
 for input1 in inputs:
     outputs.append([((np.sin(input1[0]) + 1)/2)])
 
-genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(100, 0.2, 6, 1, 1, 1, 0.4, 1.5, 10)
 
 def main():
+
+    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(100, 0.2, 6, 1, 1, 1, 0.4, 1.5, 10)
     
     exit_flag = {'stop': False}
     def on_press(key):

@@ -37,7 +37,7 @@ class GeneticAlgorithm:
         self.stagnation_limit = stagnation_limit
 
         # Global best tracking
-        self.best_fitness_ever = float('inf')
+        self.best_fitness_ever = float('-inf')
         self.best_network = None
         self.gens_since_improvement = 0
 
