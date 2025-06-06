@@ -46,7 +46,7 @@ class GeneticAlgorithm:
 
     def create_population(self):
         for _ in range(self.pop_size):
-            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.01, 0.05, 0.6)
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.01, 0.05, 0.4)
             nn.mutate()
             self.population.append(nn)
 
@@ -165,4 +165,5 @@ class GeneticAlgorithm:
         self.species = survivors
 
         self.threshold += (len(self.species) - self.target_species) / 100
+        self.threshold = max(0.1, min(self.threshold, 5.0))
  

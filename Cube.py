@@ -11,9 +11,9 @@ import random
 
 class Cube():
     def __init__(self):
-        self.starting_x = 0
-        self.starting_y = -9
-        self.starting_z = -45
+        self.starting_x = globalvars.globalvars.cube_start[0]
+        self.starting_y = globalvars.globalvars.cube_start[1]
+        self.starting_z = globalvars.globalvars.cube_start[2]
         self.starting_direction = 0
         self.cube_pos = [self.starting_x, self.starting_y, self.starting_z]
         self.velocity = [0, 0]  
@@ -60,8 +60,8 @@ class Cube():
     def move(self, movement):
         self.horizontal_movement(movement)
         self.vertical_movement(movement)
-        self.set_direction(movement)
-        self.velocity_acceleration(movement)
+        self.set_direction()
+        self.velocity_acceleration()
         self.collision_detections() 
 #        self.get_image()
             
@@ -160,7 +160,7 @@ class Cube():
         if self.cube_pos[1] > -9 and self.touching_ground != True:
             self.acceleration[1] = self.gravity
     
-    def set_direction(self, movement):
+    def set_direction(self):
         #set direction and calculate angular velocity   
         if self.direction >= 360:
             self.direction -= 360
@@ -171,7 +171,7 @@ class Cube():
         self.direction_z = math.cos(math.radians(self.direction))
         
        
-    def velocity_acceleration(self, movement): 
+    def velocity_acceleration(self): 
         #set velocities and accelerations
         self.velocity[0] += self.acceleration[0]
         self.velocity[1] += self.acceleration[1]
@@ -200,8 +200,8 @@ class Cube():
         self.current_vertices = self.get_current_vertices()  
         
     def over_floor(self):
-        if -25 <= self.cube_pos[0] <= 25:
-            if -10 >= self.cube_pos[2] >= -60:
+        if globalvars.globalvars.floor_vertices[1][0] <= self.cube_pos[0] <= globalvars.globalvars.floor_vertices[0][0]:
+            if globalvars.globalvars.floor_vertices[0][0] >= self.cube_pos[2] >= globalvars.globalvars.floor_vertices[2][0]:
                 return True
         
         

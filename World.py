@@ -9,6 +9,7 @@ from pygame.locals import *
 
 from OpenGL.GL import *
 from OpenGL.GLU import *
+import barrier
 
 class World():
     def __init__(self):
@@ -18,7 +19,7 @@ class World():
         pygame.display.set_mode(display, DOUBLEBUF|OPENGL|RESIZABLE)
 
         gluPerspective(45, (display[0]/display[1]), 0.1, 110.0)
-        glTranslatef(0, -5, -20)
+        glTranslatef(-50, -5, -20)
         glRotatef(25, 2, 0, 0)
         glEnable(GL_DEPTH_TEST)
 
@@ -44,13 +45,13 @@ class World():
         x = random.randint(0, 45)
         z = random.randint(-50, -15)
         """
-
-        x = -22
-        z = -15
-        if globalvars.globalvars.x == 22:
-            x = -22
-        elif globalvars.globalvars.x == -22:
-            x = 22
+        z = globalvars.globalvars.z
+        if globalvars.globalvars.x == 25:
+            x = 70
+        elif globalvars.globalvars.x == 70:
+            x = 25
+        else:
+            x = 25
         
         
         globalvars.globalvars.set_target_vertices(x, z)

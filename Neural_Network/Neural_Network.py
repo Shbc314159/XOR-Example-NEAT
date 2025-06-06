@@ -159,7 +159,7 @@ class Neural_Network:
         if rand() >= self.mutate_weight_prob:
             return
 
-        small_p = 0.02
+        small_p = 0.01
         # pull out dict values once
         for conn in self.genome.connections.values():
             if rand() < small_p:
@@ -167,7 +167,7 @@ class Neural_Network:
                 conn.weight = uniform(-1.0, 1.0)
             else:
                 # small Gaussian tweak
-                conn.weight += gauss(0, 0.2)
+                conn.weight += gauss(0, 0.05)
 
 
     @profile

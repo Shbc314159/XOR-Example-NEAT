@@ -3,36 +3,16 @@ from OpenGL.GLU import *
 import sys
 sys.path.append('C:/Users/samue/OneDrive/Desktop/NEAT/')
 from Neural_Network import globalvars
-import barrier
 
 class Walls: 
     def __init__(self):
-        self.back_wall_vertices = (
-            (25, -10, -60),
-            (-25, -10, -60), 
-            (-25, 20, -60),
-            (25, 20, -60),
-        )
-
-
-        self.back_wall_surface = (
-            (0, 1, 2, 3) 
-        )
+        self.back_wall_vertices = globalvars.globalvars.back_wall_vertices
+        self.back_wall_surface = globalvars.globalvars.back_wall_surface
         
-        self.floor_vertices = (
-            (25, -10, -10),
-            (-25, -10, -10),
-            (-25, -10, -60),
-            (25, -10, -60),   
-        )
-
-        self.floor_surface = (
-            (0, 1, 2, 3)
-        )
+        self.floor_vertices = globalvars.globalvars.floor_vertices
+        self.floor_surface = globalvars.globalvars.floor_surface
          
-        self.target_surface = (
-            (0, 1, 2, 3)
-        )
+        self.target_surface = globalvars.globalvars.target_surface
         
 
     def Draw_Back_Wall(self):
