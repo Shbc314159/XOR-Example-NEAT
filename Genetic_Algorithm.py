@@ -100,6 +100,11 @@ class GeneticAlgorithm:
         else:
             self.gens_since_improvement += 1
 
+        if self.gens_since_improvement > self.stagnation_limit:
+            print("Stagnation detected, injecting randomness")
+            self._inject_randomness()
+            self.gens_since_improvement = 0
+
     def best(self):
         self.best_network = min(self.population, key=lambda x: x.fitness)
         return self.best_network
@@ -168,4 +173,13 @@ class GeneticAlgorithm:
 
         self.threshold += (len(self.species) - self.target_species) / 100
         self.threshold = max(0.1, min(self.threshold, 5.0))
+
+    def _inject_randomness(self, portion=0.2):
+        """Replace a portion of the worst individuals with fresh networks."""
+        n_replace = int(self.pop_size * portion)
+        self.population.sort(key=lambda n: n.fitness, reverse=True)
+        for i in range(n_replace):
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.01, 0.05, 0.4)
+            nn.mutate()
+            self.population[-(i+1)] = nn
  

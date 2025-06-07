@@ -28,17 +28,6 @@ def draw_simulation(nn, world, episodes, steps_per_episode):
             player.update()
             world.draw(player)
 
-def draw_population(population, world, episodes, steps_per_episode):
-    """Draw the movements of a whole population overlaid in the same world."""
-    for _ in range(episodes):
-        World.randomise_target()
-        players = [Player(nn) for nn in population]
-
-        for _ in range(steps_per_episode):
-            for player in players:
-                player.update()
-            world.draw_multi(players)
-
 def _simulate_one(nn, episodes, steps_per_episode):
     """Simulate a single network and return its fitness."""
     player = Player(nn)

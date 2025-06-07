@@ -6,6 +6,8 @@ from Walls import *
 import pygame
 import pygame
 from pygame.locals import *
+import os
+os.environ.setdefault("PYGAME_HIDE_SUPPORT_PROMPT", "1")
 
 from OpenGL.GL import *
 from OpenGL.GLU import *
@@ -13,7 +15,8 @@ import barrier
 
 class World():
     def __init__(self):
-        pygame.init()
+        if not pygame.get_init():
+            pygame.init()
         display = (1600,1000)
         pygame.display.gl_set_attribute(GL_MULTISAMPLESAMPLES, 10)
         pygame.display.set_mode(display, DOUBLEBUF|OPENGL|RESIZABLE)
