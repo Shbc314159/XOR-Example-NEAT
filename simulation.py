@@ -39,38 +39,31 @@ def draw_population(population, world, episodes, steps_per_episode):
                 player.update()
             world.draw_multi(players)
 
-
-def simulate_population_parallel(population, world, episodes, steps_per_episode, pool):
-    """Simulate a whole population in parallel while drawing their movements."""
-    players = [Player(nn) for nn in population]
-
+def _simulate_one(nn, episodes, steps_per_episode):
+    """Simulate a single network and return its fitness."""
+    player = Player(nn)
+    total = 0.0
     for _ in range(episodes):
         World.randomise_target()
-        for p in players:
-            p.reset()
-
+        player.reset()
         for _ in range(steps_per_episode):
-            jobs = [
-                (p.brain, p.cube_pos, p.direction, p.x_center, p.z_center)
-                for p in players
-            ]
-            moves = pool.map(_calc_move, jobs)
+            player.update()
+        total += player.fitness
+        player.fitness = 0.0
 
-            for p, move in zip(players, moves):
-                p.update(move)
+    complexity_penalty = 1 + 0.1 * len(nn.genome.connections)
+    return (total / episodes) * complexity_penalty
 
-            world.draw_multi(players)
 
-    fitnesses = []
-    for p in players:
-        complexity_penalty = 1 + 0.1 * (len(p.brain.genome.connections))
-        p.fitness *= complexity_penalty
-        fitnesses.append(p.fitness / episodes)
+def simulate_population_parallel(population, episodes, steps_per_episode, pool=None):
+    """Simulate an entire population in parallel but avoid per-step overhead."""
+    jobs = [(nn, episodes, steps_per_episode) for nn in population]
+    if pool is not None:
+        fitnesses = pool.starmap(_simulate_one, jobs, chunksize=1)
+    else:
+        fitnesses = [_simulate_one(*job) for job in jobs]
+
+    for nn, fit in zip(population, fitnesses):
+        nn.fitness = fit
 
     return fitnesses
-
-
-def _calc_move(args):
-    nn, cube_pos, direction, x_center, z_center = args
-    outputs = nn.fast_run([cube_pos[0], cube_pos[1], cube_pos[2], direction, x_center, z_center])
-    return outputs.index(max(outputs))

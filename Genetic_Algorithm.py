@@ -121,7 +121,7 @@ class GeneticAlgorithm:
         #for nn in self.population:
            # results.append(GeneticAlgorithm._compute_fitness(nn))
         #results = pool.starmap(GeneticAlgorithm._compute_fitness, jobs, chunksize=10)
-        results = simulation.simulate_population_parallel(self.population, self.world, 2, 150, pool)
+        results = simulation.simulate_population_parallel(self.population, 2, 150, pool)
 
         for nn, fit in zip(self.population, results):
             nn.fitness = fit
