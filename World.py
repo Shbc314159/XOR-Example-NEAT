@@ -26,18 +26,23 @@ class World():
         self.walls = Walls()
 
     def draw(self, player):
+        # maintain backward compatibility for drawing a single player
+        self.draw_multi([player])
+
+    def draw_multi(self, players):
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         glClearColor(0, 0, 0, 1)
 
         self.walls.Draw_Back_Wall()
         self.walls.Draw_Floor()
         self.walls.Draw_Target()
-        
+
         for barrier in globalvars.globalvars.barriers:
             barrier.draw()
-        
-        player.draw()
-        
+
+        for p in players:
+            p.draw()
+
         pygame.display.flip()
     @classmethod
     def randomise_target(self):

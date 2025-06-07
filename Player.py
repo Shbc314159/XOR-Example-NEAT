@@ -5,7 +5,7 @@ import random
 import keyboard
 from Cube import Cube
 import math
-
+ 
 class Player(Cube):  
     def __init__(self, brain):
         super().__init__()
@@ -17,10 +17,12 @@ class Player(Cube):
         
         self.brain = brain
     
-    def update(self):
+    def update(self, move=None):
         self.update_target()
-        outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], self.direction, self.x_center, self.z_center])
-        move = outputs.index(max(outputs)) 
+
+        if not move:
+            outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], self.direction, self.x_center, self.z_center])
+            move = outputs.index(max(outputs)) 
         
         if move == 0: 
             self.move("w")

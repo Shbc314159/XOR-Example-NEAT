@@ -7,6 +7,7 @@ from Species import Species
 from multiprocessing import Pool, cpu_count
 import math
 from World import World
+import simulation
 
 class GeneticAlgorithm:    
     try:
@@ -115,12 +116,13 @@ class GeneticAlgorithm:
 
     def run(self, pool):
 
-        jobs = [(nn,) for nn in self.population]
-        results = []
+        #jobs = [(nn,) for nn in self.population]
+        #results = []
         #for nn in self.population:
            # results.append(GeneticAlgorithm._compute_fitness(nn))
-        results = pool.starmap(GeneticAlgorithm._compute_fitness, jobs, chunksize=10)
-        
+        #results = pool.starmap(GeneticAlgorithm._compute_fitness, jobs, chunksize=10)
+        results = simulation.simulate_population_parallel(self.population, self.world, 2, 150, pool)
+
         for nn, fit in zip(self.population, results):
             nn.fitness = fit
 

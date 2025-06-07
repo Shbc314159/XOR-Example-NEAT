@@ -201,7 +201,7 @@ class Cube():
         
     def over_floor(self):
         if globalvars.globalvars.floor_vertices[1][0] <= self.cube_pos[0] <= globalvars.globalvars.floor_vertices[0][0]:
-            if globalvars.globalvars.floor_vertices[0][0] >= self.cube_pos[2] >= globalvars.globalvars.floor_vertices[2][0]:
+            if globalvars.globalvars.floor_vertices[0][2] >= self.cube_pos[2] >= globalvars.globalvars.floor_vertices[2][2]:
                 return True
         
         
