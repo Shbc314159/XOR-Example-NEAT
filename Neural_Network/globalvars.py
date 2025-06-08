@@ -3,7 +3,7 @@ class globalvars():
         self.barriers = []
         self.barriers_vertices = []
         self.x = 25
-        self.z = -15
+        self.z = -55
 
         self.target_vertices = (
             (self.x + 5, -9.5, self.z + 5),
@@ -39,7 +39,7 @@ class globalvars():
             (0, 1, 2, 3)
         )
 
-        self.cube_start = [50, -9, -55]
+        self.cube_start = [50, -9, -10]
 
     def set_target_vertices(self, x, z):
         self.x = x

@@ -21,7 +21,7 @@ class Player(Cube):
         self.update_target()
 
         if not move:
-            outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], self.direction, self.x_center, self.z_center])
+            outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], math.sin(math.radians(self.direction)), math.cos(math.radians(self.direction)),  self.x_center, self.z_center])
             move = outputs.index(max(outputs)) 
         
         if move == 0: 
