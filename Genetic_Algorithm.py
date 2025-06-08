@@ -17,7 +17,7 @@ class GeneticAlgorithm:
             return func
     def __init__(self, size, selection_percent, num_inputs, num_outputs,
                  c1, c2, c3, threshold, target_species,
-                 stagnation_limit=15):
+                 stagnation_limit=10):
         # Population parameters
         self.pop_size = size
         self.percent_selected = selection_percent
@@ -68,8 +68,20 @@ class GeneticAlgorithm:
             sp.members.sort(key=lambda m: m.fitness)
             sp.members = sp.members[:num_top]
 
-        kids_per_sp = {sp: int(round(weights[sp] / total_weight * self.pop_size)) for sp in self.species}
-        
+        num_offspring = self.pop_size - len(self.species)
+        expected = {sp: (weights[sp] / total_weight) * num_offspring for sp in self.species}
+
+        kids_per_sp = {sp: int(math.floor(exp)) for sp, exp in expected.items()}
+        allocated = sum(kids_per_sp.values())
+
+        remainders = sorted(
+            ((expected[sp] - kids_per_sp[sp], sp) for sp in self.species),
+            key=lambda t: t[0],
+            reverse=True,
+        )
+        for i in range(num_offspring - allocated):
+            kids_per_sp[remainders[i][1]] += 1
+
         pairings = []
         for sp, n_kids in kids_per_sp.items():
             for _ in range(n_kids):
@@ -112,9 +124,8 @@ class GeneticAlgorithm:
     @staticmethod
     def _make_child(p1, p2):
         child = p1.crossover(p2)
-        child.mutate()
-
         child.setup() 
+        child.mutate()
         child.rebuild = True  
 
         return child
@@ -175,12 +186,12 @@ class GeneticAlgorithm:
         self.threshold = max(0.7, min(self.threshold, 4.0))
         print('Threshold: ', self.threshold)
 
-    def _inject_randomness(self, portion=0.2):
+    def _inject_randomness(self, num=10):
         """Replace a portion of the worst individuals with fresh networks."""
-        n_replace = int(self.pop_size * portion)
+        n_replace = num
         self.population.sort(key=lambda n: n.fitness, reverse=True)
         for i in range(n_replace):
-            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.01, 0.05, 0.4)
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.05, 0.1, 0.8)
             nn.mutate()
             self.population[-(i+1)] = nn
  
