@@ -27,9 +27,9 @@ class Player(Cube):
         if move == 0: 
             self.move("w")
         elif move == 1:
-            self.move("a")
-        elif move == 2:
             self.move("d")
+        elif move == 2:
+            self.move("a")
         elif move == 3:
             self.move("u")
 

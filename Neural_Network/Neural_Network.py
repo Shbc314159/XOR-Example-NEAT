@@ -159,7 +159,7 @@ class Neural_Network:
         if rand() >= self.mutate_weight_prob:
             return
 
-        small_p = 0.01
+        small_p = 0.1
         # pull out dict values once
         for conn in self.genome.connections.values():
             if rand() < small_p:

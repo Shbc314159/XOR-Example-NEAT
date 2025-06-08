@@ -54,12 +54,10 @@ class World():
         z = random.randint(-50, -15)
         """
         z = globalvars.globalvars.z
-        if globalvars.globalvars.x == 25:
+        if globalvars.globalvars.x == 70:
+            x =  25
+        elif globalvars.globalvars.x == 25:
             x = 70
-        elif globalvars.globalvars.x == 70:
-            x = 25
-        else:
-            x = 25
         
         
         globalvars.globalvars.set_target_vertices(x, z)

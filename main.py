@@ -21,7 +21,7 @@ for input1 in inputs:
 
 def main():
 
-    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(1000, 0.1, 6, 4, 1, 1, 0.4, 1.5, 10)
+    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(1000, 0.1, 6, 4, 1.7, 1.2, 2.0, 3, 10)
     
     exit_flag = {'stop': False}
     def on_press(key):
@@ -34,6 +34,8 @@ def main():
 
 
     genetic_algorithm.create_population()
+    genetic_algorithm.run(pool)
+
     fitness_history = []   # will store best fitness per generation
     generations = []       # will store generation numbers
 
@@ -52,12 +54,9 @@ def main():
     while genetic_algorithm.current_generation < 2000 and not exit_flag['stop']:
         gen = genetic_algorithm.current_generation
         print(f"Generation {gen}")
-        
-        genetic_algorithm.create_next_generation(pool)
-        genetic_algorithm.run(pool)
-        genetic_algorithm.current_generation += 1
 
-        best = genetic_algorithm.best_network
+        # evaluate current population and record the best
+        best = genetic_algorithm.best()
         fitness = best.fitness
         simulation.draw_simulation(best, genetic_algorithm.world, 2, 150)
 
@@ -73,10 +72,14 @@ def main():
         fig.canvas.draw()
         fig.canvas.flush_events()
         plt.pause(0.01)   # small pause to allow the UI to update
-        
+
         print(f"→ best fitness = {fitness}")
         print(f"  Species count: {len(genetic_algorithm.species)}")
-        #hey
+
+        # evolve next generation
+        genetic_algorithm.create_next_generation(pool)
+        genetic_algorithm.run(pool)
+        genetic_algorithm.current_generation += 1
     
     genetic_algorithm.best_network.save("best_network.pkl")
 

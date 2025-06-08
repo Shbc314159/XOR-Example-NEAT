@@ -9,7 +9,7 @@ class globalvars():
             (self.x + 5, -9.5, self.z + 5),
             (self.x, -9.5, self.z + 5),
             (self.x, -9.5, self.z),
-            (self.x + 5, -9.5, self.z),
+            (self.x + 5, -9.5, self.z), 
         )
 
         self.back_wall_vertices = (
