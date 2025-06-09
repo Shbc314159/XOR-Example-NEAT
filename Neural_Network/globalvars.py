@@ -39,7 +39,7 @@ class globalvars():
             (0, 1, 2, 3)
         )
 
-        self.cube_start = [50, -9, -10]
+        self.cube_start = [50, -9, -15]
 
     def set_target_vertices(self, x, z):
         self.x = x

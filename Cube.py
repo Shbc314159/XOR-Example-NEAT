@@ -14,7 +14,7 @@ class Cube():
         self.starting_x = globalvars.globalvars.cube_start[0]
         self.starting_y = globalvars.globalvars.cube_start[1]
         self.starting_z = globalvars.globalvars.cube_start[2]
-        self.starting_direction = 0
+        self.starting_direction = 180
         self.cube_pos = [self.starting_x, self.starting_y, self.starting_z]
         self.velocity = [0, 0]  
         self.acceleration = [0, 0] 

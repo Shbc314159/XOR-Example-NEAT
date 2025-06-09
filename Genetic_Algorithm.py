@@ -47,7 +47,7 @@ class GeneticAlgorithm:
 
     def create_population(self):
         for _ in range(self.pop_size):
-            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.05, 0.1, 0.8)
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.05, 0.1, 0.5)
             nn.mutate()
             self.population.append(nn)
 
@@ -137,7 +137,7 @@ class GeneticAlgorithm:
         #for nn in self.population:
            # results.append(GeneticAlgorithm._compute_fitness(nn))
         #results = pool.starmap(GeneticAlgorithm._compute_fitness, jobs, chunksize=10)
-        results = simulation.simulate_population_parallel(self.population, 2, 150, pool)
+        results = simulation.simulate_population_parallel(self.population, 2, 100, pool)
 
         for nn, fit in zip(self.population, results):
             nn.fitness = fit
@@ -146,7 +146,7 @@ class GeneticAlgorithm:
     def _compute_fitness(nn):
         from simulation import simulate_fitness
         
-        return simulate_fitness(nn, 2, 150)
+        return simulate_fitness(nn, 2, 100)
 
     def speciate(self):
         for sp in self.species:
@@ -191,7 +191,7 @@ class GeneticAlgorithm:
         n_replace = num
         self.population.sort(key=lambda n: n.fitness, reverse=True)
         for i in range(n_replace):
-            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.05, 0.1, 0.8)
+            nn = network.Neural_Network(self.num_inputs, self.num_outputs, 0.05, 0.1, 0.5)
             nn.mutate()
             self.population[-(i+1)] = nn
  
