@@ -1,5 +1,5 @@
-from . import Genome
-from . import History
+from Genome import Genome
+import History
 
 history = History.history
 
@@ -18,7 +18,7 @@ class Neural_Network:
     def __init__(self, num_inputs, num_outputs, mutate_neuron_prob, mutate_connection_prob, mutate_weight_prob):
         self.num_inputs = num_inputs
         self.num_outputs = num_outputs
-        self.genome = Genome.Genome()
+        self.genome = Genome()
         self.setup()
         self.fitness = 0
         self.mutate_neuron_prob = mutate_neuron_prob
@@ -31,7 +31,7 @@ class Neural_Network:
         self = object.__new__(cls)
         self.num_inputs = num_inputs
         self.num_outputs = num_outputs
-        self.genome = Genome.Genome()
+        self.genome = Genome()
         self.empty_setup()
         self.fitness = 0
         self.mutate_neuron_prob = mutate_neuron_prob

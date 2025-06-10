@@ -1,5 +1,5 @@
-from . import Neuron
-from . import Connection
+import Neuron
+from .Connection import Connection 
 import copy
 import random
 
@@ -16,7 +16,7 @@ class Genome:
     def add_connection(self, in_neuron, out_neuron, innovation_num, weight=None):
         if weight is None:
             weight = random.uniform(-2, 2)
-        connection = Connection.Connection(in_neuron, out_neuron, weight, innovation_num)
+        connection = Connection(in_neuron, out_neuron, weight, innovation_num)
         self.connections[innovation_num] = connection
         return connection
     

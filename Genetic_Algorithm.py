@@ -58,20 +58,30 @@ class GeneticAlgorithm:
         self.speciate()
 
         epsilon = 1e-6
-        total_weight = 0.0
-        weights = {}
+        species_scores = {}
+        total_score = 0.0
         for sp in self.species:
-            sp.average_fitness = (sum(member.fitness for member in sp.members) + epsilon) / len(sp.members)
-            weights[sp] = 1.0 / sp.average_fitness
-            total_weight += weights[sp]
+            # keep only the top individuals of each species
             num_top = max(int(self.percent_selected * len(sp.members)), 1)
             sp.members.sort(key=lambda m: m.fitness)
             sp.members = sp.members[:num_top]
 
-        num_offspring = self.pop_size - len(self.species)
-        expected = {sp: (weights[sp] / total_weight) * num_offspring for sp in self.species}
+            # compute adjusted fitness in the NEAT sense
+            size = len(sp.members)
+            score = 0.0
+            for member in sp.members:
+                score += (1.0 / (member.fitness + epsilon)) / size
 
-        kids_per_sp = {sp: int(math.floor(exp)) for sp, exp in expected.items()}
+            species_scores[sp] = score
+            total_score += score
+
+        num_offspring = self.pop_size - len(self.species)
+        expected = {sp: (species_scores[sp] / total_score) * num_offspring for sp in self.species}
+
+        kids_per_sp = {}
+        for sp, exp in expected.items():
+            kids_per_sp[sp] = max(1, int(math.floor(exp)))
+
         allocated = sum(kids_per_sp.values())
 
         remainders = sorted(
@@ -79,8 +89,23 @@ class GeneticAlgorithm:
             key=lambda t: t[0],
             reverse=True,
         )
-        for i in range(num_offspring - allocated):
-            kids_per_sp[remainders[i][1]] += 1
+        if allocated < num_offspring:
+            for i in range(num_offspring - allocated):
+                kids_per_sp[remainders[i % len(remainders)][1]] += 1
+        elif allocated > num_offspring:
+            over = allocated - num_offspring
+            removable = sorted(
+                ((kids_per_sp[sp] - expected[sp], sp) for sp in self.species),
+                key=lambda t: t[0],
+                reverse=True,
+            )
+            idx = 0
+            while over > 0 and removable:
+                sp = removable[idx % len(removable)][1]
+                if kids_per_sp[sp] > 1:
+                    kids_per_sp[sp] -= 1
+                    over -= 1
+                idx += 1
 
         pairings = []
         for sp, n_kids in kids_per_sp.items():
@@ -164,6 +189,7 @@ class GeneticAlgorithm:
                 new_sp.stagnant_gens = 0
                 self.species.append(new_sp)
                 print('New species created!')
+
 
         survivors = []
         for sp in self.species:
