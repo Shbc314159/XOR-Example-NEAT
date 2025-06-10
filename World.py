@@ -49,15 +49,12 @@ class World():
         pygame.display.flip()
     @classmethod
     def randomise_target(self):
-        """
-        x = random.randint(0, 45)
-        z = random.randint(-50, -15)
-        """
+        if globalvars.globalvars.x >= 70:
+            x = 25
+        else:
+            x = globalvars.globalvars.x + 5
+        
         z = globalvars.globalvars.z
-        if globalvars.globalvars.x == 70:
-            x =  25
-        elif globalvars.globalvars.x == 25:
-            x = 70
         
         
         globalvars.globalvars.set_target_vertices(x, z)

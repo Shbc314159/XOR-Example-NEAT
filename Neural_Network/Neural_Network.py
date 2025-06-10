@@ -1,4 +1,4 @@
-from Genome import Genome
+from .Genome import Genome
 import History
 
 history = History.history

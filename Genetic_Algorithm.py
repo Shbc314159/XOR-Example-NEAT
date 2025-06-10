@@ -56,60 +56,14 @@ class GeneticAlgorithm:
         best_fitness = self.best().fitness
 
         self.speciate()
-
-        epsilon = 1e-6
-        species_scores = {}
-        total_score = 0.0
         for sp in self.species:
-            # keep only the top individuals of each species
-            num_top = max(int(self.percent_selected * len(sp.members)), 1)
+            num_top = max(int(self.percent_selected * len(sp.members)), 2)
             sp.members.sort(key=lambda m: m.fitness)
             sp.members = sp.members[:num_top]
 
-            # compute adjusted fitness in the NEAT sense
-            size = len(sp.members)
-            score = 0.0
-            for member in sp.members:
-                score += (1.0 / (member.fitness + epsilon)) / size
-
-            species_scores[sp] = score
-            total_score += score
-
-        num_offspring = self.pop_size - len(self.species)
-        expected = {sp: (species_scores[sp] / total_score) * num_offspring for sp in self.species}
-
-        kids_per_sp = {}
-        for sp, exp in expected.items():
-            kids_per_sp[sp] = max(1, int(math.floor(exp)))
-
-        allocated = sum(kids_per_sp.values())
-
-        remainders = sorted(
-            ((expected[sp] - kids_per_sp[sp], sp) for sp in self.species),
-            key=lambda t: t[0],
-            reverse=True,
-        )
-        if allocated < num_offspring:
-            for i in range(num_offspring - allocated):
-                kids_per_sp[remainders[i % len(remainders)][1]] += 1
-        elif allocated > num_offspring:
-            over = allocated - num_offspring
-            removable = sorted(
-                ((kids_per_sp[sp] - expected[sp], sp) for sp in self.species),
-                key=lambda t: t[0],
-                reverse=True,
-            )
-            idx = 0
-            while over > 0 and removable:
-                sp = removable[idx % len(removable)][1]
-                if kids_per_sp[sp] > 1:
-                    kids_per_sp[sp] -= 1
-                    over -= 1
-                idx += 1
-
         pairings = []
-        for sp, n_kids in kids_per_sp.items():
-            for _ in range(n_kids):
+        for sp in self.species:
+            for _ in range(int(self.pop_size/len(self.species))):
                 p1 = random.choice(sp.members)
                 p2 = random.choice(sp.members)
                 pairings.append((p1, p2))
@@ -162,7 +116,7 @@ class GeneticAlgorithm:
         #for nn in self.population:
            # results.append(GeneticAlgorithm._compute_fitness(nn))
         #results = pool.starmap(GeneticAlgorithm._compute_fitness, jobs, chunksize=10)
-        results = simulation.simulate_population_parallel(self.population, 2, 100, pool)
+        results = simulation.simulate_population_parallel(self.population, 10, 100, pool)
 
         for nn, fit in zip(self.population, results):
             nn.fitness = fit
@@ -203,7 +157,9 @@ class GeneticAlgorithm:
                 sp.stagnant_gens = 0
             else:
                 sp.stagnant_gens += 1
-            if sp.stagnant_gens < 15 or sp.best_fitness < 1.05 * self.best_fitness_ever:
+            if sp.stagnant_gens < 15:
+                survivors.append(sp)
+            elif sp.best_fitness < (1.2 * self.best_fitness_ever):
                 survivors.append(sp)
                 
         self.species = survivors

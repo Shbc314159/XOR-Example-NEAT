@@ -11083,13 +11083,13 @@ __Pyx_RefNannySetupContext("PyInit_Neural_Network", 0);
   /*--- Execution code ---*/
 
   /* "Neural_Network/Neural_Network.py":1
- * from Genome import Genome             # <<<<<<<<<<<<<<
+ * from .Genome import Genome             # <<<<<<<<<<<<<<
  * import History
  * 
 */
   __pyx_t_2 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_Genome); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_Genome, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_Genome, __pyx_t_2, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_Genome); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -11099,7 +11099,7 @@ __Pyx_RefNannySetupContext("PyInit_Neural_Network", 0);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "Neural_Network/Neural_Network.py":2
- * from Genome import Genome
+ * from .Genome import Genome
  * import History             # <<<<<<<<<<<<<<
  * 
  * history = History.history
@@ -11570,7 +11570,7 @@ __Pyx_RefNannySetupContext("PyInit_Neural_Network", 0);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "Neural_Network/Neural_Network.py":1
- * from Genome import Genome             # <<<<<<<<<<<<<<
+ * from .Genome import Genome             # <<<<<<<<<<<<<<
  * import History
  * 
 */

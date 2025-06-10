@@ -1508,7 +1508,7 @@ struct __pyx_obj_4main___pyx_scope_struct__main;
  * 
  * def main():             # <<<<<<<<<<<<<<
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
 */
 struct __pyx_obj_4main___pyx_scope_struct__main {
   PyObject_HEAD
@@ -2495,7 +2495,7 @@ static const char __pyx_k_current_generation[] = "current_generation";
 static const char __pyx_k_main_locals_on_press[] = "main.<locals>.on_press";
 static const char __pyx_k_Best_Fitness_Over_Time[] = "Best Fitness Over Time";
 static const char __pyx_k_create_next_generation[] = "create_next_generation";
-static const char __pyx_k_7_SPUUZZ__bbc_xy_Ja_F_q_T_a_t1[] = "\200\001\340\004\030\320\030)\320):\270!\2707\300(\310#\310S\320PU\320UZ\320Z_\320_b\320bc\340\004\021\220\030\230\021\330\004\005\360\010\000\005\020\210x\220y\240\001\240\031\250!\330\004\014\210J\220a\330\004\014\210F\220!\360\006\000\005\026\320\025'\240q\330\004\025\220T\230\021\230!\340\004\026\220a\330\004\022\220!\360\006\000\005\010\200t\2101\330\004\n\210*\220C\220y\240\001\240\023\240C\240y\260\004\260A\360\006\000\005\021\220\006\220e\2301\230D\240\001\330\004\n\210*\220A\220Q\330\004\n\210+\220Q\220a\330\004\n\210+\220Q\220a\340\004\007\200u\210A\340\004\n\320\n\033\320\033/\250r\260\025\260d\270$\270i\300q\310\001\330\010\016\320\016\037\230q\330\010\r\210Q\210b\220\017\230q\360\006\000\t\020\320\017 \240\005\240Q\330\010\022\220$\220a\360\006\000\t\023\320\022\"\240!\2406\320):\270(\300#\300Q\340\010\023\2207\230!\2301\330\010\027\220w\230a\230q\360\006\000\t\021\220\t\230\021\230-\240q\330\010\016\210f\220A\330\010\016\210o\230Q\360\006\000\t\014\2107\220%\220q\330\010\013\2107\220-\230q\330\010\013\2106\220\021\220!\340\010\r\210Q\210b\320\020%\240Q\330\010\r\210Q\210b\320\020%\240S\250\001\320):\270!\360\006\000\t\032\320\0310\260\001\260\021\330\010\031\230\024\230Q\230a\330\010\031\320\0310\260\001\340\004\025\220]\240%\240q\250\001";
+static const char __pyx_k_5_c_EQVV___xy_Ja_F_q_T_a_t1_Cy[] = "\200\001\340\004\030\320\030)\320):\270!\2705\300\006\300c\310\023\310E\320QV\320V[\320[^\320^_\340\004\021\220\030\230\021\330\004\005\360\010\000\005\020\210x\220y\240\001\240\031\250!\330\004\014\210J\220a\330\004\014\210F\220!\360\006\000\005\026\320\025'\240q\330\004\025\220T\230\021\230!\340\004\026\220a\330\004\022\220!\360\006\000\005\010\200t\2101\330\004\n\210*\220C\220y\240\001\240\023\240C\240y\260\004\260A\360\006\000\005\021\220\006\220e\2301\230D\240\001\330\004\n\210*\220A\220Q\330\004\n\210+\220Q\220a\330\004\n\210+\220Q\220a\340\004\007\200u\210A\340\004\n\320\n\033\320\033/\250r\260\025\260d\270$\270i\300q\310\001\330\010\016\320\016\037\230q\330\010\r\210Q\210b\220\017\230q\360\006\000\t\020\320\017 \240\005\240Q\330\010\022\220$\220a\360\006\000\t\023\320\022\"\240!\2406\320):\270(\300$\300a\340\010\023\2207\230!\2301\330\010\027\220w\230a\230q\360\006\000\t\021\220\t\230\021\230-\240q\330\010\016\210f\220A\330\010\016\210o\230Q\360\006\000\t\014\2107\220%\220q\330\010\013\2107\220-\230q\330\010\013\2106\220\021\220!\340\010\r\210Q\210b\320\020%\240Q\330\010\r\210Q\210b\320\020%\240S\250\001\320):\270!\360\006\000\t\032\320\0310\260\001\260\021\330\010\031\230\024\230Q\230a\330\010\031\320\0310\260\001\340\004\025\220]\240%\240q\250\001";
 static const char __pyx_k_ESC_pressed_will_exit_after_curr[] = "ESC pressed \342\200\224 will exit after current generation\342\200\246";
 /* #### Code section: decls ### */
 static PyObject *__pyx_pf_4main_4main_on_press(PyObject *__pyx_self, PyObject *__pyx_v_key); /* proto */
@@ -2551,7 +2551,7 @@ typedef struct {
   PyObject *__pyx_float_1_7;
   PyObject *__pyx_float_2_0;
   PyObject *__pyx_float_0_01;
-  PyObject *__pyx_float_0_0001;
+  PyObject *__pyx_float_0_25;
   PyObject *__pyx_int_0;
   PyObject *__pyx_int_1;
   PyObject *__pyx_int_2;
@@ -2560,8 +2560,8 @@ typedef struct {
   PyObject *__pyx_int_7;
   PyObject *__pyx_int_10;
   PyObject *__pyx_int_100;
+  PyObject *__pyx_int_200;
   PyObject *__pyx_int_2000;
-  PyObject *__pyx_int_10000;
 /* #### Code section: module_state_contents ### */
 /* CommonTypesMetaclass.module_state_decls */
 PyTypeObject *__pyx_CommonTypesMetaclassType;
@@ -2746,7 +2746,7 @@ static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_float_1_7);
   Py_CLEAR(clear_module_state->__pyx_float_2_0);
   Py_CLEAR(clear_module_state->__pyx_float_0_01);
-  Py_CLEAR(clear_module_state->__pyx_float_0_0001);
+  Py_CLEAR(clear_module_state->__pyx_float_0_25);
   Py_CLEAR(clear_module_state->__pyx_int_0);
   Py_CLEAR(clear_module_state->__pyx_int_1);
   Py_CLEAR(clear_module_state->__pyx_int_2);
@@ -2755,8 +2755,8 @@ static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_int_7);
   Py_CLEAR(clear_module_state->__pyx_int_10);
   Py_CLEAR(clear_module_state->__pyx_int_100);
+  Py_CLEAR(clear_module_state->__pyx_int_200);
   Py_CLEAR(clear_module_state->__pyx_int_2000);
-  Py_CLEAR(clear_module_state->__pyx_int_10000);
   return 0;
 }
 #endif
@@ -2788,7 +2788,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_1_7);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_2_0);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_0_01);
-  __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_0_0001);
+  __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_0_25);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_0);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_1);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_2);
@@ -2797,8 +2797,8 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_7);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_10);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_100);
+  __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_200);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_2000);
-  __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_10000);
   return 0;
 }
 #endif
@@ -2809,7 +2809,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
  * 
  * def main():             # <<<<<<<<<<<<<<
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
 */
 
 /* Python wrapper */
@@ -3031,7 +3031,7 @@ static PyObject *__pyx_pf_4main_4main_on_press(PyObject *__pyx_self, PyObject *_
  * 
  * def main():             # <<<<<<<<<<<<<<
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
 */
 
 static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
@@ -3077,7 +3077,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
   /* "main.py":24
  * def main():
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)             # <<<<<<<<<<<<<<
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)             # <<<<<<<<<<<<<<
  * 
  *     exit_flag = {'stop': False}
 */
@@ -3093,7 +3093,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_t_1 = 0;
 
   /* "main.py":26
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
  * 
  *     exit_flag = {'stop': False}             # <<<<<<<<<<<<<<
  *     def on_press(key):
@@ -3621,7 +3621,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
     /* "main.py":63
  *         #simulation.draw_population(genetic_algorithm.population,
  *                                    #genetic_algorithm.world, 2, 100)
- *         simulation.draw_simulation(best, genetic_algorithm.world, 2, 100)             # <<<<<<<<<<<<<<
+ *         simulation.draw_simulation(best, genetic_algorithm.world, 10, 100)             # <<<<<<<<<<<<<<
  * 
  *         generations.append(gen)
 */
@@ -3646,7 +3646,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
     }
     #endif
     {
-      PyObject *__pyx_callargs[5] = {__pyx_t_4, __pyx_v_best, __pyx_t_10, __pyx_mstate_global->__pyx_int_2, __pyx_mstate_global->__pyx_int_100};
+      PyObject *__pyx_callargs[5] = {__pyx_t_4, __pyx_v_best, __pyx_t_10, __pyx_mstate_global->__pyx_int_10, __pyx_mstate_global->__pyx_int_100};
       __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_5, (5-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -3657,7 +3657,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "main.py":65
- *         simulation.draw_simulation(best, genetic_algorithm.world, 2, 100)
+ *         simulation.draw_simulation(best, genetic_algorithm.world, 10, 100)
  * 
  *         generations.append(gen)             # <<<<<<<<<<<<<<
  *         fitness_history.append(fitness)
@@ -3955,7 +3955,7 @@ static PyObject *__pyx_pf_4main_main(CYTHON_UNUSED PyObject *__pyx_self) {
  * 
  * def main():             # <<<<<<<<<<<<<<
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
 */
 
   /* function exit code */
@@ -4989,7 +4989,7 @@ __Pyx_RefNannySetupContext("PyInit_main", 0);
  * 
  * def main():             # <<<<<<<<<<<<<<
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
 */
   __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_4main_1main, 0, __pyx_mstate_global->__pyx_n_u_main, NULL, __pyx_mstate_global->__pyx_n_u_main, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[1])); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -5402,11 +5402,11 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   /* "main.py":24
  * def main():
  * 
- *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)             # <<<<<<<<<<<<<<
+ *     genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)             # <<<<<<<<<<<<<<
  * 
  *     exit_flag = {'stop': False}
 */
-  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(9, __pyx_mstate_global->__pyx_int_10000, __pyx_mstate_global->__pyx_float_0_0001, __pyx_mstate_global->__pyx_int_7, __pyx_mstate_global->__pyx_int_4, __pyx_mstate_global->__pyx_float_1_7, __pyx_mstate_global->__pyx_float_1_2, __pyx_mstate_global->__pyx_float_2_0, __pyx_mstate_global->__pyx_int_2, __pyx_mstate_global->__pyx_int_10); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(9, __pyx_mstate_global->__pyx_int_200, __pyx_mstate_global->__pyx_float_0_25, __pyx_mstate_global->__pyx_int_7, __pyx_mstate_global->__pyx_int_4, __pyx_mstate_global->__pyx_float_1_7, __pyx_mstate_global->__pyx_float_1_2, __pyx_mstate_global->__pyx_float_2_0, __pyx_mstate_global->__pyx_int_4, __pyx_mstate_global->__pyx_int_10); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[0]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[0]);
 
@@ -5487,7 +5487,7 @@ static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   __pyx_mstate->__pyx_float_1_7 = PyFloat_FromDouble(1.7); if (unlikely(!__pyx_mstate->__pyx_float_1_7)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_float_2_0 = PyFloat_FromDouble(2.0); if (unlikely(!__pyx_mstate->__pyx_float_2_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_float_0_01 = PyFloat_FromDouble(0.01); if (unlikely(!__pyx_mstate->__pyx_float_0_01)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_mstate->__pyx_float_0_0001 = PyFloat_FromDouble(0.0001); if (unlikely(!__pyx_mstate->__pyx_float_0_0001)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_mstate->__pyx_float_0_25 = PyFloat_FromDouble(0.25); if (unlikely(!__pyx_mstate->__pyx_float_0_25)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_0 = PyLong_FromLong(0); if (unlikely(!__pyx_mstate->__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_1 = PyLong_FromLong(1); if (unlikely(!__pyx_mstate->__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_2 = PyLong_FromLong(2); if (unlikely(!__pyx_mstate->__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -5496,8 +5496,8 @@ static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   __pyx_mstate->__pyx_int_7 = PyLong_FromLong(7); if (unlikely(!__pyx_mstate->__pyx_int_7)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_10 = PyLong_FromLong(10); if (unlikely(!__pyx_mstate->__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_100 = PyLong_FromLong(100); if (unlikely(!__pyx_mstate->__pyx_int_100)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_mstate->__pyx_int_200 = PyLong_FromLong(200); if (unlikely(!__pyx_mstate->__pyx_int_200)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_mstate->__pyx_int_2000 = PyLong_FromLong(2000); if (unlikely(!__pyx_mstate->__pyx_int_2000)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_mstate->__pyx_int_10000 = PyLong_FromLong(10000L); if (unlikely(!__pyx_mstate->__pyx_int_10000)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -5533,9 +5533,9 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
     __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_main_py, __pyx_mstate->__pyx_n_u_on_press, __pyx_k_A_4s_a_Qj, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 13, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 22, 410};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 13, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 22, 409};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_genetic_algorithm, __pyx_mstate->__pyx_n_u_exit_flag, __pyx_mstate->__pyx_n_u_on_press, __pyx_mstate->__pyx_n_u_on_press, __pyx_mstate->__pyx_n_u_listener, __pyx_mstate->__pyx_n_u_fitness_history, __pyx_mstate->__pyx_n_u_generations, __pyx_mstate->__pyx_n_u_fig, __pyx_mstate->__pyx_n_u_ax_fit, __pyx_mstate->__pyx_n_u_line_fit, __pyx_mstate->__pyx_n_u_gen, __pyx_mstate->__pyx_n_u_best, __pyx_mstate->__pyx_n_u_fitness};
-    __pyx_mstate_global->__pyx_codeobj_tab[1] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_main_py, __pyx_mstate->__pyx_n_u_main, __pyx_k_7_SPUUZZ__bbc_xy_Ja_F_q_T_a_t1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[1])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[1] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_main_py, __pyx_mstate->__pyx_n_u_main, __pyx_k_5_c_EQVV___xy_Ja_F_q_T_a_t1_Cy, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[1])) goto bad;
   }
   Py_DECREF(tuple_dedup_map);
   return 0;

@@ -1,4 +1,4 @@
-import Neuron
+from . import Neuron
 from .Connection import Connection 
 import copy
 import random

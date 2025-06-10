@@ -21,7 +21,7 @@ for input1 in inputs:
 
 def main():
 
-    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(10000, 0.0001, 7, 4, 1.7, 1.2, 2.0, 2, 10)
+    genetic_algorithm = Genetic_Algorithm.GeneticAlgorithm(200, 0.25, 7, 4, 1.7, 1.2, 2.0, 4, 10)
     
     exit_flag = {'stop': False}
     def on_press(key):
@@ -60,7 +60,7 @@ def main():
         fitness = best.fitness
         #simulation.draw_population(genetic_algorithm.population,
                                    #genetic_algorithm.world, 2, 100)
-        simulation.draw_simulation(best, genetic_algorithm.world, 2, 100)
+        simulation.draw_simulation(best, genetic_algorithm.world, 10, 100)
 
         generations.append(gen)
         fitness_history.append(fitness)

@@ -3,7 +3,7 @@
 class Species():
     def __init__(self, archetype):
         self.archetype = archetype
-        self.members = [archetype]
+        self.members = [archetype] 
         self.average_fitness = 0
         self.best_fitness = float('inf') 
         self.stagnant_gens = 0
