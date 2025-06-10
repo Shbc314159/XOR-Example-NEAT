@@ -20,18 +20,30 @@ class Player(Cube):
     def update(self, move=None):
         self.update_target()
 
-        if not move:
-            outputs = self.brain.fast_run([self.cube_pos[0], self.cube_pos[1], self.cube_pos[2], math.sin(math.radians(self.direction)), math.cos(math.radians(self.direction)),  self.x_center, self.z_center])
-            move = outputs.index(max(outputs)) 
-        
-        if move == 0: 
-            self.move("w")
-        elif move == 1:
-            self.move("d")
-        elif move == 2:
-            self.move("a")
-        elif move == 3:
-            self.move("u")
+        if move is None:
+            outputs = self.brain.fast_run([
+                self.cube_pos[0],
+                self.cube_pos[1],
+                self.cube_pos[2],
+                math.sin(math.radians(self.direction)),
+                math.cos(math.radians(self.direction)),
+                self.x_center,
+                self.z_center,
+            ])
+
+            actions = []
+            if outputs[0] > 0.75:
+                actions.append("w")
+            if outputs[1] > 0.75:
+                actions.append("d")
+            if outputs[2] > 0.75:
+                actions.append("a")
+            if outputs[3] > 0.75:
+                actions.append("u")
+
+            move = "".join(actions)
+
+        self.move(move)
 
             
         self.distance_from_target = ((self.x_center - self.cube_pos[0]) ** 2 + 

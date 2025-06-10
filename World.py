@@ -49,10 +49,7 @@ class World():
         pygame.display.flip()
     @classmethod
     def randomise_target(self):
-        if globalvars.globalvars.x >= 70:
-            x = 25
-        else:
-            x = globalvars.globalvars.x + 5
+        x = random.randint(25, 70)
         
         z = globalvars.globalvars.z
         

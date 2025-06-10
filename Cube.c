@@ -2093,6 +2093,12 @@ static CYTHON_INLINE double __Pyx_PyUnicode_AsDouble(PyObject *obj) {
 static CYTHON_INLINE PyObject* __Pyx__PyNumber_Float(PyObject* obj);
 #define __Pyx_PyNumber_Float(x) (PyFloat_CheckExact(x) ? __Pyx_NewRef(x) : __Pyx__PyNumber_Float(x))
 
+/* PySequenceContains.proto */
+static CYTHON_INLINE int __Pyx_PySequence_ContainsTF(PyObject* item, PyObject* seq, int eq) {
+    int result = PySequence_Contains(seq, item);
+    return unlikely(result < 0) ? result : (result == (eq == Py_EQ));
+}
+
 /* SetItemInt.proto */
 #define __Pyx_SetItemInt(o, i, v, type, is_signed, to_py_func, is_list, wraparound, boundscheck, has_gil)\
     (__Pyx_fits_Py_ssize_t(i, type, is_signed) ?\
@@ -2801,12 +2807,12 @@ static const char __pyx_k_Cube_velocity_acceleration[] = "Cube.velocity_accelera
 static const char __pyx_k_A_4_Q_a_Cq_a_O4t1D_Q_O4t1D_Q[] = "\200A\340\010\013\2104\210{\230#\230Q\330\014\020\220\016\230a\330\r\021\220\033\230C\230q\330\014\020\220\016\230a\340\010\014\210O\2304\230t\2401\240D\250\010\260\001\260\024\260Q\330\010\014\210O\2304\230t\2401\240D\250\010\260\001\260\024\260Q";
 static const char __pyx_k_A_E_as_AS_D_q_S_Cq_7_1_7_1_q[] = "\200A\330\010\022\220!\330\010\014\210E\220\025\220a\220s\230!\330\014\034\230A\230S\240\001\240\023\240D\250\007\250q\330\014\035\230S\240\001\240\021\330\014\034\230C\230q\240\001\330\014\023\2207\230!\2301\330\014\023\2207\230!\2301\340\010\017\210q";
 static const char __pyx_k_A_4y_Bb_1_4_T_Yas_Q_Kz_A_d_5H_q[] = "\200A\330\010\013\2104\210y\230\001\230\023\230B\230b\240\003\2401\330\014\020\220\t\230\021\230&\240\001\340\010\013\2104\210{\230#\230T\240\024\240Y\250a\250s\260#\260Q\330\014\020\220\t\230\021\230&\240\001\340\010\014\210K\220z\240\033\250A\330\014\036\230d\240.\260\001\260\024\3205H\310\007\310q\330\014\017\320\017\037\230s\240!\330\020\024\220M\240\021\340\020\024\220M\240\021\330\014\020\320\020%\240Q\320&7\260w\270a\340\010\014\320\014 \240\004\320$9\270\021";
-static const char __pyx_k_A_9Cq_QfD_9_a_t9AS_M_A_M_q_IQe1[] = "\200A\330\010\013\2109\220C\220q\330\014\020\220\r\230Q\230f\240D\320(9\270\021\270$\270a\340\014\017\210t\2209\230A\230S\240\002\240!\330\020\024\220M\240\021\240&\250\004\250A\340\020\024\220M\240\021\240%\240q\330\020\024\220I\230Q\230e\2401\340\014\017\210y\230\003\2301\330\020\024\220N\240!\330\021\032\230#\230Q\330\020\024\220N\240!\330\021\032\230#\230Q\330\020\024\220N\240!";
 static const char __pyx_k_A_T_2Qc_Yar_T_2Qa_2Qc_Yar_T_2Qa[] = "\200A\330\010\t\330\014\r\210T\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a\330\r\021\220\031\230!\2302\230Q\230c\240\024\240Y\250a\250r\260\021\260#\260T\270\031\300!\3002\300Q\300a";
 static const char __pyx_k_A_T_A_T_A_T_A_gS_Qa_gS_Qa_gS_Qa[] = "\200A\330\010\031\230\021\230'\240\021\240#\240T\250\033\260A\330\010\031\230\021\230'\240\021\240#\240T\250\033\260A\330\010\031\230\021\230'\240\021\240#\240T\250\033\260A\340\010\016\210g\220S\230\001\320\031*\250#\250Q\250a\330\010\016\210g\220S\230\001\320\031*\250#\250Q\250a\330\010\016\210g\220S\230\001\320\031*\250#\250Q\250a\340\010\030\230\001\330\010\031\230\021\340\010\014\210K\220q\330\014\017\210t\220=\240\001\240\031\250&\260\006\260f\270F\300&\310\001\330\020 \240\r\250V\2601\260A\330\020\036\230g\240Q\240a\340\010\017\210q";
 static const char __pyx_k_A_q_3c_YavZWbbqqrrttuuv_z_O1Bas[] = "\200A\330\010\013\210:\220[\240\017\250q\260\002\260!\2603\260c\270\024\270Y\300a\300v\310Z\320Wb\320bq\320qr\320rt\320tu\320uv\330\014\017\210z\230\033\240O\2601\260B\260a\260s\270#\270T\300\031\310!\3106\320Q[\320[f\320fu\320uv\320vx\320xy\320yz\330\020\027\220q";
 static const char __pyx_k_A_1E_d_T_Ja_N_iq_Kt1_E_IT_1A_3az[] = "\200A\330\010\023\2201\220E\230\021\230,\240d\250+\260T\270\021\330 $\240J\250a\330 $\240N\260$\260i\270q\300\001\330\010\021\220\021\220&\230\004\230K\240t\2501\330\030\034\230E\240\021\330\030\034\230I\240T\320);\2701\270A\360\006\000\t\032\230\030\240\022\2403\240a\240z\260\022\2601\330\010\027\220x\230r\240\023\240A\240X\250R\250q\360\006\000\t\r\320\014\034\230L\250\001\250\021\330\010\024\220A\320\025&\240d\250!\330\010\037\230s\240!\240:\250R\250v\260Q\260a\330\010\024\220A\320\025&\320&<\270O\3101\360\006\000\t\r\210N\230,\240a\240q\330\010\024\220A\320\025&\240d\250!\330\010\035\230S\240\001\240\030\250\022\2506\260\021\260!\330\010\024\220A\320\025&\320&:\270-\300q\360\006\000\t\025\220A\320\025&\240a";
-static const char __pyx_k_A_4_U_iq_4r_D_QQTTU_y_1_IQe1_M_t[] = "\200A\340\010\013\2104\210{\230#\230U\240$\240i\250q\260\003\2604\260r\270\023\270D\320@Q\320QT\320TU\330\014\017\210y\230\003\2301\330\020\024\220I\230Q\230e\2401\330\020\024\220M\240\021\240%\240t\2501\340\020\024\220M\240\021\240%\240q\340\010\013\2104\210t\220;\230a\330\014\020\220\r\230Q\230e\2404\240q\340\010\013\2104\210y\230\001\230\023\230C\230r\240\024\240T\320):\270#\270Q\330\014\020\220\r\230Q\230e\2404\240q";
+static const char __pyx_k_A_4_U_iq_4r_D_QQTTU_t3a_IQe1_M_t[] = "\200A\340\010\013\2104\210{\230#\230U\240$\240i\250q\260\003\2604\260r\270\023\270D\320@Q\320QT\320TU\330\014\017\210t\2203\220a\330\020\024\220I\230Q\230e\2401\330\020\024\220M\240\021\240%\240t\2501\340\020\024\220M\240\021\240%\240q\340\010\013\2104\210t\220;\230a\330\014\020\220\r\230Q\230e\2404\240q\340\010\013\2104\210y\230\001\230\023\230C\230r\240\024\240T\320):\270#\270Q\330\014\020\220\r\230Q\230e\2404\240q";
+static const char __pyx_k_A_4s_QfD_9_a_t9AS_M_A_M_q_IQe1_4[] = "\200A\330\010\013\2104\210s\220!\330\014\020\220\r\230Q\230f\240D\320(9\270\021\270$\270a\340\014\017\210t\2209\230A\230S\240\002\240!\330\020\024\220M\240\021\240&\250\004\250A\340\020\024\220M\240\021\240%\240q\330\020\024\220I\230Q\230e\2401\340\010\013\2104\210s\220!\330\014\020\220\016\230a\330\010\013\2104\210s\220!\330\014\020\220\016\230a\330\r\026\220c\230\021\330\014\020\220\016\230a";
 static const char __pyx_k_A_A_Bd_l_S_4_S_S_L_1_A_A_d_q_S_A[] = "\200A\330\010\024\220A\330\010\024\220B\220d\230!\330\010\021\220\021\220$\220l\240#\240S\250\001\360\006\000\t\014\2104\210~\230S\240\005\240S\250\004\250L\270\003\2701\330\014\020\220\014\230A\360\006\000\t\025\220A\320\025&\240d\250!\330\010\027\220q\230\003\230:\240S\250\001\330\010\024\220A\320\025&\240d\250!\330\010\026\220a\220s\230*\240C\240q\340\010\033\2301\230A\330\010\033\2301\230A\360\006\000\t\025\220A\220Z\230s\240!\340\010\034\230A\230Q\330\010\034\230A\230Q\340\010\024\220A\320\025&\240a\340\010\023\2201";
 static const char __pyx_k_A_IQfD_Qa_IQfD_Qa_IQj_IQd_Rt1_IQ[] = "\200A\340\010\014\210I\220Q\220f\230D\240\r\250Q\250a\330\010\014\210I\220Q\220f\230D\240\r\250Q\250a\340\010\014\210I\220Q\220j\240\004\240I\250Q\250d\260#\260R\260t\2701\330\010\014\210I\220Q\220f\230D\240\t\250\021\250!\330\010\014\210I\220Q\220j\240\004\240I\250Q\250d\260#\260R\260t\2701\340\010\014\320\014\037\230q";
 static const char __pyx_k_A_N_K_1_N_K_1_N_K_1_L_m4q_L_A_AS[] = "\200A\330\010\014\210N\230*\240K\250{\270!\2701\330\010\014\210N\230*\240K\250{\270!\2701\330\010\014\210N\230*\240K\250{\270!\2701\330\010\014\320\014\"\240!\330\010\014\210L\230\001\230\024\230]\250$\250m\2704\270q\330\010\014\210L\230\001\230\023\230A\330\010\014\320\014\034\230A\230S\240\001\330\010\014\320\014$\240A\330\010\014\210K\220q\330\010\014\210L\230\001\330\010\014\320\014 \240\001\330\010\014\210H\220A\330\010\014\210M\230\024\230Q\330\010\014\320\014\037\230q\330\010\014\210M\230\021\330\010\014\210A\330\014\r\210T\220\024\220Q\330\r\020\220\004\220A\330\r\016\210c\220\024\220Q\330\r\016\210d\220$\220a\330\r\021\220\023\220A\330\r\020\220\003\2201\330\r\016\210d\220#\220Q\330\r\016\210c\220\023\220A\360\006\000\t\r\210A\330\014\r\210R\210r\220\022\2201\330\r\017\210r\220\022\2201\330\r\017\210r\220\022\2201\330\r\017\210r\220\022\2201\330\r\017\210r\220\022\2201\330\r\017\210r\220\022\2201\340\010\014\320\014\034\230A\330\010\014\210N\230!\340\010\014\320\014 \240\001";
@@ -5972,7 +5978,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_10get_surface_color(CYTHON_UNUSED PyObject
  *             return (0, 1, 0)
  * 
  *     def horizontal_movement(self, movement):             # <<<<<<<<<<<<<<
- *         if movement == "w":
+ *         if 'w' in movement:
  *             self.acceleration[0] += self.force_horizontal/self.mass
 */
 
@@ -6087,16 +6093,16 @@ static PyObject *__pyx_pf_4Cube_4Cube_12horizontal_movement(CYTHON_UNUSED PyObje
   /* "Cube.py":132
  * 
  *     def horizontal_movement(self, movement):
- *         if movement == "w":             # <<<<<<<<<<<<<<
+ *         if 'w' in movement:             # <<<<<<<<<<<<<<
  *             self.acceleration[0] += self.force_horizontal/self.mass
  *         else:
 */
-  __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_n_u_w, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_mstate_global->__pyx_n_u_w, __pyx_v_movement, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 132, __pyx_L1_error)
   if (__pyx_t_1) {
 
     /* "Cube.py":133
  *     def horizontal_movement(self, movement):
- *         if movement == "w":
+ *         if 'w' in movement:
  *             self.acceleration[0] += self.force_horizontal/self.mass             # <<<<<<<<<<<<<<
  *         else:
  *             if self.velocity[0] > 0:
@@ -6125,7 +6131,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_12horizontal_movement(CYTHON_UNUSED PyObje
     /* "Cube.py":132
  * 
  *     def horizontal_movement(self, movement):
- *         if movement == "w":             # <<<<<<<<<<<<<<
+ *         if 'w' in movement:             # <<<<<<<<<<<<<<
  *             self.acceleration[0] += self.force_horizontal/self.mass
  *         else:
 */
@@ -6201,7 +6207,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_12horizontal_movement(CYTHON_UNUSED PyObje
  *                 self.acceleration[0] = 0
  *                 self.velocity[0] = 0             # <<<<<<<<<<<<<<
  * 
- *             if movement == "d":
+ *         if 'd' in movement:
 */
       __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_velocity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
@@ -6209,119 +6215,118 @@ static PyObject *__pyx_pf_4Cube_4Cube_12horizontal_movement(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __pyx_L4:;
+  }
+  __pyx_L3:;
+
+  /* "Cube.py":141
+ *                 self.velocity[0] = 0
+ * 
+ *         if 'd' in movement:             # <<<<<<<<<<<<<<
+ *             self.direction -= 5
+ *         if 'a' in movement:
+*/
+  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_mstate_global->__pyx_n_u_d, __pyx_v_movement, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 141, __pyx_L1_error)
+  if (__pyx_t_1) {
+
+    /* "Cube.py":142
+ * 
+ *         if 'd' in movement:
+ *             self.direction -= 5             # <<<<<<<<<<<<<<
+ *         if 'a' in movement:
+ *             self.direction += 5
+*/
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_4 = __Pyx_PyLong_SubtractObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_5, 5, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_4) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
     /* "Cube.py":141
  *                 self.velocity[0] = 0
  * 
- *             if movement == "d":             # <<<<<<<<<<<<<<
- *                 self.direction -= 5
- *             elif movement == "a":
+ *         if 'd' in movement:             # <<<<<<<<<<<<<<
+ *             self.direction -= 5
+ *         if 'a' in movement:
 */
-    __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_n_u_d, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 141, __pyx_L1_error)
-    if (__pyx_t_1) {
+  }
 
-      /* "Cube.py":142
- * 
- *             if movement == "d":
- *                 self.direction -= 5             # <<<<<<<<<<<<<<
- *             elif movement == "a":
- *                 self.direction += 5
+  /* "Cube.py":143
+ *         if 'd' in movement:
+ *             self.direction -= 5
+ *         if 'a' in movement:             # <<<<<<<<<<<<<<
+ *             self.direction += 5
+ *         elif movement == " ":
 */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyLong_SubtractObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_5, 5, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_4) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_mstate_global->__pyx_n_u_a, __pyx_v_movement, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (__pyx_t_1) {
 
-      /* "Cube.py":141
- *                 self.velocity[0] = 0
- * 
- *             if movement == "d":             # <<<<<<<<<<<<<<
- *                 self.direction -= 5
- *             elif movement == "a":
+    /* "Cube.py":144
+ *             self.direction -= 5
+ *         if 'a' in movement:
+ *             self.direction += 5             # <<<<<<<<<<<<<<
+ *         elif movement == " ":
+ *             self.direction += 360
 */
-      goto __pyx_L5;
-    }
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_2 = __Pyx_PyLong_AddObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_5, 5, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_2) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "Cube.py":143
- *             if movement == "d":
- *                 self.direction -= 5
- *             elif movement == "a":             # <<<<<<<<<<<<<<
- *                 self.direction += 5
- *             elif movement == " ":
+ *         if 'd' in movement:
+ *             self.direction -= 5
+ *         if 'a' in movement:             # <<<<<<<<<<<<<<
+ *             self.direction += 5
+ *         elif movement == " ":
 */
-    __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_n_u_a, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
-    if (__pyx_t_1) {
+    goto __pyx_L6;
+  }
 
-      /* "Cube.py":144
- *                 self.direction -= 5
- *             elif movement == "a":
- *                 self.direction += 5             # <<<<<<<<<<<<<<
- *             elif movement == " ":
- *                 self.direction += 360
-*/
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyLong_AddObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_5, 5, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_2) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-      /* "Cube.py":143
- *             if movement == "d":
- *                 self.direction -= 5
- *             elif movement == "a":             # <<<<<<<<<<<<<<
- *                 self.direction += 5
- *             elif movement == " ":
-*/
-      goto __pyx_L5;
-    }
-
-    /* "Cube.py":145
- *             elif movement == "a":
- *                 self.direction += 5
- *             elif movement == " ":             # <<<<<<<<<<<<<<
- *                 self.direction += 360
+  /* "Cube.py":145
+ *         if 'a' in movement:
+ *             self.direction += 5
+ *         elif movement == " ":             # <<<<<<<<<<<<<<
+ *             self.direction += 360
  * 
 */
-    __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_kp_u_, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 145, __pyx_L1_error)
-    if (__pyx_t_1) {
+  __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_kp_u_, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 145, __pyx_L1_error)
+  if (__pyx_t_1) {
 
-      /* "Cube.py":146
- *                 self.direction += 5
- *             elif movement == " ":
- *                 self.direction += 360             # <<<<<<<<<<<<<<
+    /* "Cube.py":146
+ *             self.direction += 5
+ *         elif movement == " ":
+ *             self.direction += 360             # <<<<<<<<<<<<<<
  * 
  *     def vertical_movement(self, movement):
 */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_360, 0x168, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_360, 0x168, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_direction, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "Cube.py":145
- *             elif movement == "a":
- *                 self.direction += 5
- *             elif movement == " ":             # <<<<<<<<<<<<<<
- *                 self.direction += 360
+    /* "Cube.py":145
+ *         if 'a' in movement:
+ *             self.direction += 5
+ *         elif movement == " ":             # <<<<<<<<<<<<<<
+ *             self.direction += 360
  * 
 */
-    }
-    __pyx_L5:;
   }
-  __pyx_L3:;
+  __pyx_L6:;
 
   /* "Cube.py":131
  *             return (0, 1, 0)
  * 
  *     def horizontal_movement(self, movement):             # <<<<<<<<<<<<<<
- *         if movement == "w":
+ *         if 'w' in movement:
  *             self.acceleration[0] += self.force_horizontal/self.mass
 */
 
@@ -6343,7 +6348,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_12horizontal_movement(CYTHON_UNUSED PyObje
 }
 
 /* "Cube.py":148
- *                 self.direction += 360
+ *             self.direction += 360
  * 
  *     def vertical_movement(self, movement):             # <<<<<<<<<<<<<<
  *         #up/down movement calculations
@@ -6460,7 +6465,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
  *     def vertical_movement(self, movement):
  *         #up/down movement calculations
  *         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):             # <<<<<<<<<<<<<<
- *             if movement == "u":
+ *             if 'u' in movement:
  *                 self.velocity[1] = 0
 */
   __pyx_t_3 = __pyx_v_self;
@@ -6507,16 +6512,16 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
     /* "Cube.py":151
  *         #up/down movement calculations
  *         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):
- *             if movement == "u":             # <<<<<<<<<<<<<<
+ *             if 'u' in movement:             # <<<<<<<<<<<<<<
  *                 self.velocity[1] = 0
  *                 self.acceleration[1] = self.force_up
 */
-    __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_movement, __pyx_mstate_global->__pyx_n_u_u, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 151, __pyx_L1_error)
+    __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_mstate_global->__pyx_n_u_u, __pyx_v_movement, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 151, __pyx_L1_error)
     if (__pyx_t_1) {
 
       /* "Cube.py":152
  *         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):
- *             if movement == "u":
+ *             if 'u' in movement:
  *                 self.velocity[1] = 0             # <<<<<<<<<<<<<<
  *                 self.acceleration[1] = self.force_up
  *             else:
@@ -6527,7 +6532,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "Cube.py":153
- *             if movement == "u":
+ *             if 'u' in movement:
  *                 self.velocity[1] = 0
  *                 self.acceleration[1] = self.force_up             # <<<<<<<<<<<<<<
  *             else:
@@ -6544,7 +6549,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
       /* "Cube.py":151
  *         #up/down movement calculations
  *         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):
- *             if movement == "u":             # <<<<<<<<<<<<<<
+ *             if 'u' in movement:             # <<<<<<<<<<<<<<
  *                 self.velocity[1] = 0
  *                 self.acceleration[1] = self.force_up
 */
@@ -6570,7 +6575,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
  *     def vertical_movement(self, movement):
  *         #up/down movement calculations
  *         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):             # <<<<<<<<<<<<<<
- *             if movement == "u":
+ *             if 'u' in movement:
  *                 self.velocity[1] = 0
 */
   }
@@ -6677,7 +6682,7 @@ static PyObject *__pyx_pf_4Cube_4Cube_14vertical_movement(CYTHON_UNUSED PyObject
   }
 
   /* "Cube.py":148
- *                 self.direction += 360
+ *             self.direction += 360
  * 
  *     def vertical_movement(self, movement):             # <<<<<<<<<<<<<<
  *         #up/down movement calculations
@@ -13613,7 +13618,7 @@ __Pyx_RefNannySetupContext("PyInit_Cube", 0);
  *             return (0, 1, 0)
  * 
  *     def horizontal_movement(self, movement):             # <<<<<<<<<<<<<<
- *         if movement == "w":
+ *         if 'w' in movement:
  *             self.acceleration[0] += self.force_horizontal/self.mass
 */
   __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_4Cube_4Cube_13horizontal_movement, 0, __pyx_mstate_global->__pyx_n_u_Cube_horizontal_movement, NULL, __pyx_mstate_global->__pyx_n_u_Cube, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[6])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
@@ -13622,7 +13627,7 @@ __Pyx_RefNannySetupContext("PyInit_Cube", 0);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "Cube.py":148
- *                 self.direction += 360
+ *             self.direction += 360
  * 
  *     def vertical_movement(self, movement):             # <<<<<<<<<<<<<<
  *         #up/down movement calculations
@@ -14437,14 +14442,14 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
     __pyx_mstate_global->__pyx_codeobj_tab[5] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_Cube_py, __pyx_mstate->__pyx_n_u_get_surface_color, __pyx_k_A_84s_S_Cs_Cs, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[5])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 131, 125};
+    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 131, 127};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_self, __pyx_mstate->__pyx_n_u_movement};
-    __pyx_mstate_global->__pyx_codeobj_tab[6] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_Cube_py, __pyx_mstate->__pyx_n_u_horizontal_movement, __pyx_k_A_9Cq_QfD_9_a_t9AS_M_A_M_q_IQe1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[6])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[6] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_Cube_py, __pyx_mstate->__pyx_n_u_horizontal_movement, __pyx_k_A_4s_QfD_9_a_t9AS_M_A_M_q_IQe1_4, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[6])) goto bad;
   }
   {
     const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 148, 145};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_self, __pyx_mstate->__pyx_n_u_movement};
-    __pyx_mstate_global->__pyx_codeobj_tab[7] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_Cube_py, __pyx_mstate->__pyx_n_u_vertical_movement, __pyx_k_A_4_U_iq_4r_D_QQTTU_y_1_IQe1_M_t, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[7])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[7] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_Cube_py, __pyx_mstate->__pyx_n_u_vertical_movement, __pyx_k_A_4_U_iq_4r_D_QQTTU_t3a_IQe1_M_t, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[7])) goto bad;
   }
   {
     const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 163, 78};

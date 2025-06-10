@@ -129,7 +129,7 @@ class Cube():
             return (0, 1, 0)
     
     def horizontal_movement(self, movement):
-        if movement == "w":
+        if 'w' in movement:
             self.acceleration[0] += self.force_horizontal/self.mass
         else:
             if self.velocity[0] > 0:
@@ -138,17 +138,17 @@ class Cube():
                 self.acceleration[0] = 0
                 self.velocity[0] = 0   
                 
-            if movement == "d":
-                self.direction -= 5
-            elif movement == "a":
-                self.direction += 5
-            elif movement == " ":
-                self.direction += 360
+        if 'd' in movement:
+            self.direction -= 5
+        if 'a' in movement:
+            self.direction += 5
+        elif movement == " ":
+            self.direction += 360
     
     def vertical_movement(self, movement):
         #up/down movement calculations
         if self.over_floor() and (self.cube_pos[1] <= -9 or self.touching_ground == True):
-            if movement == "u":
+            if 'u' in movement:
                 self.velocity[1] = 0
                 self.acceleration[1] = self.force_up
             else:

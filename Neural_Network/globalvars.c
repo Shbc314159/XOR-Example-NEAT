@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "globalvars",
+        "name": "Neural_Network.globalvars",
         "sources": [
             "Neural_Network\\globalvars.py"
         ]
     },
-    "module_name": "globalvars"
+    "module_name": "Neural_Network.globalvars"
 }
 END: Cython Metadata */
 
@@ -1124,8 +1124,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__globalvars
-#define __PYX_HAVE_API__globalvars
+#define __PYX_HAVE__Neural_Network__globalvars
+#define __PYX_HAVE_API__Neural_Network__globalvars
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -2207,14 +2207,14 @@ static int __Pyx_State_RemoveModule(void*);
 #define __PYX_TYPE_MODULE_PREFIX __PYX_ABI_MODULE_NAME "."
 
 
-/* Module declarations from "globalvars" */
+/* Module declarations from "Neural_Network.globalvars" */
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "globalvars"
-extern int __pyx_module_is_main_globalvars;
-int __pyx_module_is_main_globalvars = 0;
+#define __Pyx_MODULE_NAME "Neural_Network.globalvars"
+extern int __pyx_module_is_main_Neural_Network__globalvars;
+int __pyx_module_is_main_Neural_Network__globalvars = 0;
 
-/* Implementation of "globalvars" */
+/* Implementation of "Neural_Network.globalvars" */
 /* #### Code section: global_var ### */
 /* #### Code section: string_decls ### */
 static const char __pyx_k_[] = "?";
@@ -2248,13 +2248,14 @@ static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_back_wall_vertices[] = "back_wall_vertices";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_set_target_vertices[] = "set_target_vertices";
+static const char __pyx_k_Neural_Network_globalvars[] = "Neural_Network.globalvars";
 static const char __pyx_k_Neural_Network_globalvars_py[] = "Neural_Network/globalvars.py";
 static const char __pyx_k_globalvars_set_target_vertices[] = "globalvars.set_target_vertices";
 static const char __pyx_k_A_L_E_F_A_T_Bc_t3b_V4s_A_V4q_Bc[] = "\200A\330\010\014\210L\230\001\330\010\014\320\014!\240\021\330\010\014\210E\220\021\330\010\014\210F\220!\340\010\014\210A\330\014\r\210T\220\023\220B\220c\230\026\230t\2403\240b\250\001\330\r\021\220\024\220V\2304\230s\240\"\240A\330\r\021\220\024\220V\2304\230q\330\r\021\220\023\220B\220c\230\026\230t\2401\360\006\000\t\r\210A\330\014\r\210U\220%\220q\330\r\022\220%\220q\330\r\021\220\025\220a\330\r\021\220\025\220a\360\010\000\t\r\210A\330\r\020\220\003\2203\220a\360\006\000\t\r\210A\330\014\r\210U\220%\220q\330\r\022\220%\220q\330\r\022\220%\220q\330\r\022\220%\220q\360\006\000\t\r\210A\330\r\020\220\003\2203\220a\360\006\000\t\r\210A\330\r\020\220\003\2203\220a\360\006\000\t\r\210N\230!\2305\240\004\240A";
 static const char __pyx_k_A_E_E_A_T_Bc_t3b_V4s_A_V4q_Bc_t1[] = "\200A\330\010\014\210E\220\021\330\010\014\210E\220\021\330\010\014\210A\330\014\r\210T\220\023\220B\220c\230\026\230t\2403\240b\250\001\330\r\021\220\024\220V\2304\230s\240\"\240A\330\r\021\220\024\220V\2304\230q\330\r\021\220\023\220B\220c\230\026\230t\2401";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_z); /* proto */
+static PyObject *__pyx_pf_14Neural_Network_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_14Neural_Network_10globalvars_10globalvars_2set_target_vertices(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_z); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 /* SmallCodeConfig */
@@ -2296,7 +2297,7 @@ typedef struct {
   __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_pop;
   PyObject *__pyx_tuple[9];
   PyObject *__pyx_codeobj_tab[2];
-  PyObject *__pyx_string_tab[33];
+  PyObject *__pyx_string_tab[34];
   PyObject *__pyx_float_neg_9_5;
   PyObject *__pyx_int_0;
   PyObject *__pyx_int_1;
@@ -2350,38 +2351,39 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #endif
 /* #### Code section: constant_name_defines ### */
 #define __pyx_kp_u_ __pyx_string_tab[0]
-#define __pyx_kp_u_Neural_Network_globalvars_py __pyx_string_tab[1]
-#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[2]
-#define __pyx_n_u_back_wall_surface __pyx_string_tab[3]
-#define __pyx_n_u_back_wall_vertices __pyx_string_tab[4]
-#define __pyx_n_u_barriers __pyx_string_tab[5]
-#define __pyx_n_u_barriers_vertices __pyx_string_tab[6]
-#define __pyx_n_u_cline_in_traceback __pyx_string_tab[7]
-#define __pyx_n_u_cube_start __pyx_string_tab[8]
-#define __pyx_n_u_doc __pyx_string_tab[9]
-#define __pyx_n_u_floor_surface __pyx_string_tab[10]
-#define __pyx_n_u_floor_vertices __pyx_string_tab[11]
-#define __pyx_n_u_func __pyx_string_tab[12]
-#define __pyx_n_u_globalvars __pyx_string_tab[13]
-#define __pyx_n_u_globalvars___init __pyx_string_tab[14]
-#define __pyx_n_u_globalvars_set_target_vertices __pyx_string_tab[15]
-#define __pyx_n_u_init __pyx_string_tab[16]
-#define __pyx_n_u_is_coroutine __pyx_string_tab[17]
-#define __pyx_n_u_main __pyx_string_tab[18]
-#define __pyx_n_u_metaclass __pyx_string_tab[19]
-#define __pyx_n_u_module __pyx_string_tab[20]
-#define __pyx_n_u_name __pyx_string_tab[21]
-#define __pyx_n_u_pop __pyx_string_tab[22]
-#define __pyx_n_u_prepare __pyx_string_tab[23]
-#define __pyx_n_u_qualname __pyx_string_tab[24]
-#define __pyx_n_u_self __pyx_string_tab[25]
-#define __pyx_n_u_set_name __pyx_string_tab[26]
-#define __pyx_n_u_set_target_vertices __pyx_string_tab[27]
-#define __pyx_n_u_target_surface __pyx_string_tab[28]
-#define __pyx_n_u_target_vertices __pyx_string_tab[29]
-#define __pyx_n_u_test __pyx_string_tab[30]
-#define __pyx_n_u_x __pyx_string_tab[31]
-#define __pyx_n_u_z __pyx_string_tab[32]
+#define __pyx_n_u_Neural_Network_globalvars __pyx_string_tab[1]
+#define __pyx_kp_u_Neural_Network_globalvars_py __pyx_string_tab[2]
+#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[3]
+#define __pyx_n_u_back_wall_surface __pyx_string_tab[4]
+#define __pyx_n_u_back_wall_vertices __pyx_string_tab[5]
+#define __pyx_n_u_barriers __pyx_string_tab[6]
+#define __pyx_n_u_barriers_vertices __pyx_string_tab[7]
+#define __pyx_n_u_cline_in_traceback __pyx_string_tab[8]
+#define __pyx_n_u_cube_start __pyx_string_tab[9]
+#define __pyx_n_u_doc __pyx_string_tab[10]
+#define __pyx_n_u_floor_surface __pyx_string_tab[11]
+#define __pyx_n_u_floor_vertices __pyx_string_tab[12]
+#define __pyx_n_u_func __pyx_string_tab[13]
+#define __pyx_n_u_globalvars __pyx_string_tab[14]
+#define __pyx_n_u_globalvars___init __pyx_string_tab[15]
+#define __pyx_n_u_globalvars_set_target_vertices __pyx_string_tab[16]
+#define __pyx_n_u_init __pyx_string_tab[17]
+#define __pyx_n_u_is_coroutine __pyx_string_tab[18]
+#define __pyx_n_u_main __pyx_string_tab[19]
+#define __pyx_n_u_metaclass __pyx_string_tab[20]
+#define __pyx_n_u_module __pyx_string_tab[21]
+#define __pyx_n_u_name __pyx_string_tab[22]
+#define __pyx_n_u_pop __pyx_string_tab[23]
+#define __pyx_n_u_prepare __pyx_string_tab[24]
+#define __pyx_n_u_qualname __pyx_string_tab[25]
+#define __pyx_n_u_self __pyx_string_tab[26]
+#define __pyx_n_u_set_name __pyx_string_tab[27]
+#define __pyx_n_u_set_target_vertices __pyx_string_tab[28]
+#define __pyx_n_u_target_surface __pyx_string_tab[29]
+#define __pyx_n_u_target_vertices __pyx_string_tab[30]
+#define __pyx_n_u_test __pyx_string_tab[31]
+#define __pyx_n_u_x __pyx_string_tab[32]
+#define __pyx_n_u_z __pyx_string_tab[33]
 /* #### Code section: module_state_clear ### */
 #if CYTHON_USE_MODULE_STATE
 static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
@@ -2404,7 +2406,7 @@ static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
   #endif
   for (int i=0; i<9; ++i) { Py_CLEAR(clear_module_state->__pyx_tuple[i]); }
   for (int i=0; i<2; ++i) { Py_CLEAR(clear_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<33; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<34; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
   Py_CLEAR(clear_module_state->__pyx_float_neg_9_5);
   Py_CLEAR(clear_module_state->__pyx_int_0);
   Py_CLEAR(clear_module_state->__pyx_int_1);
@@ -2442,7 +2444,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
   #endif
   for (int i=0; i<9; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_tuple[i]); }
   for (int i=0; i<2; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<33; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<34; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_neg_9_5);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_0);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_1);
@@ -2463,7 +2465,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
 #endif
 /* #### Code section: module_code ### */
 
-/* "globalvars.py":2
+/* "Neural_Network/globalvars.py":2
  * class globalvars():
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         self.barriers = []
@@ -2471,15 +2473,15 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
 */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10globalvars_10globalvars_1__init__(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_14Neural_Network_10globalvars_10globalvars_1__init__(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_10globalvars_10globalvars_1__init__ = {"__init__", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10globalvars_10globalvars_1__init__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10globalvars_10globalvars_1__init__(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_14Neural_Network_10globalvars_10globalvars_1__init__ = {"__init__", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_14Neural_Network_10globalvars_10globalvars_1__init__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_14Neural_Network_10globalvars_10globalvars_1__init__(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -2541,11 +2543,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   for (Py_ssize_t __pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
     Py_XDECREF(values[__pyx_temp]);
   }
-  __Pyx_AddTraceback("globalvars.globalvars.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Neural_Network.globalvars.globalvars.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10globalvars_10globalvars___init__(__pyx_self, __pyx_v_self);
+  __pyx_r = __pyx_pf_14Neural_Network_10globalvars_10globalvars___init__(__pyx_self, __pyx_v_self);
 
   /* function exit code */
   for (Py_ssize_t __pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
@@ -2555,7 +2557,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_14Neural_Network_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2569,7 +2571,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "globalvars.py":3
+  /* "Neural_Network/globalvars.py":3
  * class globalvars():
  *     def __init__(self):
  *         self.barriers = []             # <<<<<<<<<<<<<<
@@ -2581,7 +2583,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_barriers, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "globalvars.py":4
+  /* "Neural_Network/globalvars.py":4
  *     def __init__(self):
  *         self.barriers = []
  *         self.barriers_vertices = []             # <<<<<<<<<<<<<<
@@ -2593,7 +2595,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_barriers_vertices, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "globalvars.py":5
+  /* "Neural_Network/globalvars.py":5
  *         self.barriers = []
  *         self.barriers_vertices = []
  *         self.x = 25             # <<<<<<<<<<<<<<
@@ -2602,7 +2604,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_x, __pyx_mstate_global->__pyx_int_25) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
 
-  /* "globalvars.py":6
+  /* "Neural_Network/globalvars.py":6
  *         self.barriers_vertices = []
  *         self.x = 25
  *         self.z = -55             # <<<<<<<<<<<<<<
@@ -2611,7 +2613,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_z, __pyx_mstate_global->__pyx_int_neg_55) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
 
-  /* "globalvars.py":9
+  /* "Neural_Network/globalvars.py":9
  * 
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -2640,7 +2642,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":10
+  /* "Neural_Network/globalvars.py":10
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -2666,7 +2668,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
 
-  /* "globalvars.py":11
+  /* "Neural_Network/globalvars.py":11
  *             (self.x + 5, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z),             # <<<<<<<<<<<<<<
@@ -2689,7 +2691,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":12
+  /* "Neural_Network/globalvars.py":12
  *             (self.x, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z),
  *             (self.x + 5, -9.5, self.z),             # <<<<<<<<<<<<<<
@@ -2715,7 +2717,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":9
+  /* "Neural_Network/globalvars.py":9
  * 
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -2737,7 +2739,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
 
-  /* "globalvars.py":8
+  /* "Neural_Network/globalvars.py":8
  *         self.z = -55
  * 
  *         self.target_vertices = (             # <<<<<<<<<<<<<<
@@ -2747,7 +2749,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_target_vertices, __pyx_t_3) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "globalvars.py":15
+  /* "Neural_Network/globalvars.py":15
  *         )
  * 
  *         self.back_wall_vertices = (             # <<<<<<<<<<<<<<
@@ -2756,7 +2758,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_back_wall_vertices, __pyx_mstate_global->__pyx_tuple[4]) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "globalvars.py":23
+  /* "Neural_Network/globalvars.py":23
  * 
  * 
  *         self.back_wall_surface = (             # <<<<<<<<<<<<<<
@@ -2765,7 +2767,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_back_wall_surface, __pyx_mstate_global->__pyx_tuple[5]) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "globalvars.py":27
+  /* "Neural_Network/globalvars.py":27
  *         )
  * 
  *         self.floor_vertices = (             # <<<<<<<<<<<<<<
@@ -2774,7 +2776,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_floor_vertices, __pyx_mstate_global->__pyx_tuple[8]) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
 
-  /* "globalvars.py":34
+  /* "Neural_Network/globalvars.py":34
  *         )
  * 
  *         self.floor_surface = (             # <<<<<<<<<<<<<<
@@ -2783,7 +2785,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_floor_surface, __pyx_mstate_global->__pyx_tuple[5]) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
 
-  /* "globalvars.py":38
+  /* "Neural_Network/globalvars.py":38
  *         )
  * 
  *         self.target_surface = (             # <<<<<<<<<<<<<<
@@ -2792,7 +2794,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_target_surface, __pyx_mstate_global->__pyx_tuple[5]) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
 
-  /* "globalvars.py":42
+  /* "Neural_Network/globalvars.py":42
  *         )
  * 
  *         self.cube_start = [50, -9, -15]             # <<<<<<<<<<<<<<
@@ -2813,7 +2815,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cube_start, __pyx_t_3) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "globalvars.py":2
+  /* "Neural_Network/globalvars.py":2
  * class globalvars():
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         self.barriers = []
@@ -2830,7 +2832,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("globalvars.globalvars.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Neural_Network.globalvars.globalvars.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2838,7 +2840,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "globalvars.py":44
+/* "Neural_Network/globalvars.py":44
  *         self.cube_start = [50, -9, -15]
  * 
  *     def set_target_vertices(self, x, z):             # <<<<<<<<<<<<<<
@@ -2847,15 +2849,15 @@ static PyObject *__pyx_pf_10globalvars_10globalvars___init__(CYTHON_UNUSED PyObj
 */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10globalvars_10globalvars_3set_target_vertices(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_14Neural_Network_10globalvars_10globalvars_3set_target_vertices(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_10globalvars_10globalvars_3set_target_vertices = {"set_target_vertices", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10globalvars_10globalvars_3set_target_vertices, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10globalvars_10globalvars_3set_target_vertices(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_14Neural_Network_10globalvars_10globalvars_3set_target_vertices = {"set_target_vertices", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_14Neural_Network_10globalvars_10globalvars_3set_target_vertices, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_14Neural_Network_10globalvars_10globalvars_3set_target_vertices(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -2933,11 +2935,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   for (Py_ssize_t __pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
     Py_XDECREF(values[__pyx_temp]);
   }
-  __Pyx_AddTraceback("globalvars.globalvars.set_target_vertices", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Neural_Network.globalvars.globalvars.set_target_vertices", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10globalvars_10globalvars_2set_target_vertices(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_z);
+  __pyx_r = __pyx_pf_14Neural_Network_10globalvars_10globalvars_2set_target_vertices(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_z);
 
   /* function exit code */
   for (Py_ssize_t __pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
@@ -2947,7 +2949,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_z) {
+static PyObject *__pyx_pf_14Neural_Network_10globalvars_10globalvars_2set_target_vertices(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_z) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2961,7 +2963,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_target_vertices", 0);
 
-  /* "globalvars.py":45
+  /* "Neural_Network/globalvars.py":45
  * 
  *     def set_target_vertices(self, x, z):
  *         self.x = x             # <<<<<<<<<<<<<<
@@ -2970,7 +2972,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_x, __pyx_v_x) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "globalvars.py":46
+  /* "Neural_Network/globalvars.py":46
  *     def set_target_vertices(self, x, z):
  *         self.x = x
  *         self.z = z             # <<<<<<<<<<<<<<
@@ -2979,7 +2981,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
 */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_z, __pyx_v_z) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "globalvars.py":48
+  /* "Neural_Network/globalvars.py":48
  *         self.z = z
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -3008,7 +3010,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":49
+  /* "Neural_Network/globalvars.py":49
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -3034,7 +3036,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
 
-  /* "globalvars.py":50
+  /* "Neural_Network/globalvars.py":50
  *             (self.x + 5, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z),             # <<<<<<<<<<<<<<
@@ -3057,7 +3059,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":51
+  /* "Neural_Network/globalvars.py":51
  *             (self.x, -9.5, self.z + 5),
  *             (self.x, -9.5, self.z),
  *             (self.x + 5, -9.5, self.z),             # <<<<<<<<<<<<<<
@@ -3083,7 +3085,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
 
-  /* "globalvars.py":48
+  /* "Neural_Network/globalvars.py":48
  *         self.z = z
  *         self.target_vertices = (
  *             (self.x + 5, -9.5, self.z + 5),             # <<<<<<<<<<<<<<
@@ -3105,7 +3107,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
 
-  /* "globalvars.py":47
+  /* "Neural_Network/globalvars.py":47
  *         self.x = x
  *         self.z = z
  *         self.target_vertices = (             # <<<<<<<<<<<<<<
@@ -3115,7 +3117,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_target_vertices, __pyx_t_3) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "globalvars.py":44
+  /* "Neural_Network/globalvars.py":44
  *         self.cube_start = [50, -9, -15]
  * 
  *     def set_target_vertices(self, x, z):             # <<<<<<<<<<<<<<
@@ -3133,7 +3135,7 @@ static PyObject *__pyx_pf_10globalvars_10globalvars_2set_target_vertices(CYTHON_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("globalvars.globalvars.set_target_vertices", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Neural_Network.globalvars.globalvars.set_target_vertices", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3484,13 +3486,13 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
   if (__pyx_AsyncGen_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   /*--- Library function declarations ---*/
-  if (__pyx_module_is_main_globalvars) {
+  if (__pyx_module_is_main_Neural_Network__globalvars) {
     if (PyObject_SetAttr(__pyx_m, __pyx_mstate_global->__pyx_n_u_name, __pyx_mstate_global->__pyx_n_u_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "globalvars")) {
-      if (unlikely((PyDict_SetItemString(modules, "globalvars", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Neural_Network.globalvars")) {
+      if (unlikely((PyDict_SetItemString(modules, "Neural_Network.globalvars", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   /*--- Builtin init code ---*/
@@ -3508,38 +3510,38 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
   (void)__Pyx_modinit_function_import_code(__pyx_mstate);
   /*--- Execution code ---*/
 
-  /* "globalvars.py":1
+  /* "Neural_Network/globalvars.py":1
  * class globalvars():             # <<<<<<<<<<<<<<
  *     def __init__(self):
  *         self.barriers = []
 */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_mstate_global->__pyx_empty_tuple, __pyx_mstate_global->__pyx_n_u_globalvars, __pyx_mstate_global->__pyx_n_u_globalvars, (PyObject *) NULL, __pyx_mstate_global->__pyx_n_u_globalvars, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_mstate_global->__pyx_empty_tuple, __pyx_mstate_global->__pyx_n_u_globalvars, __pyx_mstate_global->__pyx_n_u_globalvars, (PyObject *) NULL, __pyx_mstate_global->__pyx_n_u_Neural_Network_globalvars, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "globalvars.py":2
+  /* "Neural_Network/globalvars.py":2
  * class globalvars():
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         self.barriers = []
  *         self.barriers_vertices = []
 */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_10globalvars_10globalvars_1__init__, 0, __pyx_mstate_global->__pyx_n_u_globalvars___init, NULL, __pyx_mstate_global->__pyx_n_u_globalvars, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_14Neural_Network_10globalvars_10globalvars_1__init__, 0, __pyx_mstate_global->__pyx_n_u_globalvars___init, NULL, __pyx_mstate_global->__pyx_n_u_Neural_Network_globalvars, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_init, __pyx_t_3) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "globalvars.py":44
+  /* "Neural_Network/globalvars.py":44
  *         self.cube_start = [50, -9, -15]
  * 
  *     def set_target_vertices(self, x, z):             # <<<<<<<<<<<<<<
  *         self.x = x
  *         self.z = z
 */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_10globalvars_10globalvars_3set_target_vertices, 0, __pyx_mstate_global->__pyx_n_u_globalvars_set_target_vertices, NULL, __pyx_mstate_global->__pyx_n_u_globalvars, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_14Neural_Network_10globalvars_10globalvars_3set_target_vertices, 0, __pyx_mstate_global->__pyx_n_u_globalvars_set_target_vertices, NULL, __pyx_mstate_global->__pyx_n_u_Neural_Network_globalvars, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_set_target_vertices, __pyx_t_3) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "globalvars.py":1
+  /* "Neural_Network/globalvars.py":1
  * class globalvars():             # <<<<<<<<<<<<<<
  *     def __init__(self):
  *         self.barriers = []
@@ -3550,7 +3552,7 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "globalvars.py":54
+  /* "Neural_Network/globalvars.py":54
  *         )
  * 
  * globalvars = globalvars()             # <<<<<<<<<<<<<<
@@ -3570,7 +3572,7 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
   if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_globalvars, __pyx_t_2) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "globalvars.py":1
+  /* "Neural_Network/globalvars.py":1
  * class globalvars():             # <<<<<<<<<<<<<<
  *     def __init__(self):
  *         self.barriers = []
@@ -3589,7 +3591,7 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
   __Pyx_XDECREF(__pyx_t_4);
   if (__pyx_m) {
     if (__pyx_mstate->__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init globalvars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Neural_Network.globalvars", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -3603,7 +3605,7 @@ __Pyx_RefNannySetupContext("PyInit_globalvars", 0);
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init globalvars");
+    PyErr_SetString(PyExc_ImportError, "init Neural_Network.globalvars");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3641,6 +3643,7 @@ typedef struct {
 static const char * const __pyx_string_tab_encodings[] = { 0 };
 static const __Pyx_StringTabEntry __pyx_string_tab[] = {
   {__pyx_k_, sizeof(__pyx_k_), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_ */
+  {__pyx_k_Neural_Network_globalvars, sizeof(__pyx_k_Neural_Network_globalvars), 0, 1, 1}, /* PyObject cname: __pyx_n_u_Neural_Network_globalvars */
   {__pyx_k_Neural_Network_globalvars_py, sizeof(__pyx_k_Neural_Network_globalvars_py), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_Neural_Network_globalvars_py */
   {__pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 1, 1}, /* PyObject cname: __pyx_n_u_asyncio_coroutines */
   {__pyx_k_back_wall_surface, sizeof(__pyx_k_back_wall_surface), 0, 1, 1}, /* PyObject cname: __pyx_n_u_back_wall_surface */
@@ -3691,7 +3694,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "globalvars.py":16
+  /* "Neural_Network/globalvars.py":16
  * 
  *         self.back_wall_vertices = (
  *             (75, -10, -60),             # <<<<<<<<<<<<<<
@@ -3702,7 +3705,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[0]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[0]);
 
-  /* "globalvars.py":17
+  /* "Neural_Network/globalvars.py":17
  *         self.back_wall_vertices = (
  *             (75, -10, -60),
  *             (25, -10, -60),             # <<<<<<<<<<<<<<
@@ -3713,7 +3716,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[1]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[1]);
 
-  /* "globalvars.py":18
+  /* "Neural_Network/globalvars.py":18
  *             (75, -10, -60),
  *             (25, -10, -60),
  *             (25, 20, -60),             # <<<<<<<<<<<<<<
@@ -3724,7 +3727,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[2]);
 
-  /* "globalvars.py":19
+  /* "Neural_Network/globalvars.py":19
  *             (25, -10, -60),
  *             (25, 20, -60),
  *             (75, 20, -60),             # <<<<<<<<<<<<<<
@@ -3735,7 +3738,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[3]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[3]);
 
-  /* "globalvars.py":16
+  /* "Neural_Network/globalvars.py":16
  * 
  *         self.back_wall_vertices = (
  *             (75, -10, -60),             # <<<<<<<<<<<<<<
@@ -3746,7 +3749,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[4]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[4]);
 
-  /* "globalvars.py":24
+  /* "Neural_Network/globalvars.py":24
  * 
  *         self.back_wall_surface = (
  *             (0, 1, 2, 3)             # <<<<<<<<<<<<<<
@@ -3757,7 +3760,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[5]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[5]);
 
-  /* "globalvars.py":28
+  /* "Neural_Network/globalvars.py":28
  * 
  *         self.floor_vertices = (
  *             (75, -10, -10),             # <<<<<<<<<<<<<<
@@ -3768,7 +3771,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[6]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[6]);
 
-  /* "globalvars.py":29
+  /* "Neural_Network/globalvars.py":29
  *         self.floor_vertices = (
  *             (75, -10, -10),
  *             (25, -10, -10),             # <<<<<<<<<<<<<<
@@ -3779,7 +3782,7 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[7]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[7]);
 
-  /* "globalvars.py":28
+  /* "Neural_Network/globalvars.py":28
  * 
  *         self.floor_vertices = (
  *             (75, -10, -10),             # <<<<<<<<<<<<<<
